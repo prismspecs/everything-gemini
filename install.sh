@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# install.sh — Install claude rules while preserving directory structure.
+# install.sh — Install gemini rules while preserving directory structure.
 #
 # Usage:
-#   ./install.sh [--target <claude|cursor>] <language> [<language> ...]
+#   ./install.sh [--target <gemini|cursor>] <language> [<language> ...]
 #
 # Examples:
 #   ./install.sh typescript
@@ -11,7 +11,7 @@
 #   ./install.sh --target cursor typescript python golang
 #
 # Targets:
-#   claude       (default) — Install rules to ~/.claude/rules/
+#   gemini       (default) — Install rules to ~/.gemini/rules/
 #   cursor       — Install rules, agents, skills, commands, and MCP to ./.cursor/
 #   antigravity  — Install configs to .agent/
 #
@@ -35,27 +35,27 @@ SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
 RULES_DIR="$SCRIPT_DIR/rules"
 
 # --- Parse --target flag ---
-TARGET="claude"
+TARGET="gemini"
 if [[ "${1:-}" == "--target" ]]; then
     if [[ -z "${2:-}" ]]; then
-        echo "Error: --target requires a value (claude or cursor)" >&2
+        echo "Error: --target requires a value (gemini or cursor)" >&2
         exit 1
     fi
     TARGET="$2"
     shift 2
 fi
 
-if [[ "$TARGET" != "claude" && "$TARGET" != "cursor" && "$TARGET" != "antigravity" ]]; then
-    echo "Error: unknown target '$TARGET'. Must be 'claude', 'cursor', or 'antigravity'." >&2
+if [[ "$TARGET" != "gemini" && "$TARGET" != "cursor" && "$TARGET" != "antigravity" ]]; then
+    echo "Error: unknown target '$TARGET'. Must be 'gemini', 'cursor', or 'antigravity'." >&2
     exit 1
 fi
 
 # --- Usage ---
 if [[ $# -eq 0 ]]; then
-    echo "Usage: $0 [--target <claude|cursor|antigravity>] <language> [<language> ...]"
+    echo "Usage: $0 [--target <gemini|cursor|antigravity>] <language> [<language> ...]"
     echo ""
     echo "Targets:"
-    echo "  claude       (default) — Install rules to ~/.claude/rules/"
+    echo "  gemini       (default) — Install rules to ~/.gemini/rules/"
     echo "  cursor       — Install rules, agents, skills, commands, and MCP to ./.cursor/"
     echo "  antigravity  — Install configs to .agent/"
     echo ""
@@ -68,9 +68,9 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
-# --- Claude target (existing behavior) ---
-if [[ "$TARGET" == "claude" ]]; then
-    DEST_DIR="${CLAUDE_RULES_DIR:-$HOME/.claude/rules}"
+# --- Gemini target (existing behavior) ---
+if [[ "$TARGET" == "gemini" ]]; then
+    DEST_DIR="${GEMINI_RULES_DIR:-$HOME/.gemini/rules}"
 
     # Warn if destination already exists (user may have local customizations)
     if [[ -d "$DEST_DIR" ]] && [[ "$(ls -A "$DEST_DIR" 2>/dev/null)" ]]; then

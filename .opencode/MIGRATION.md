@@ -1,16 +1,16 @@
-# Migration Guide: Claude Code to OpenCode
+# Migration Guide: Gemini Code to OpenCode
 
-This guide helps you migrate from Claude Code to OpenCode while using the Everything Claude Code (ECC) configuration.
+This guide helps you migrate from Gemini Code to OpenCode while using the Everything Gemini Code (ECC) configuration.
 
 ## Overview
 
-OpenCode is an alternative CLI for AI-assisted development that supports **all** the same features as Claude Code, with some differences in configuration format.
+OpenCode is an alternative CLI for AI-assisted development that supports **all** the same features as Gemini Code, with some differences in configuration format.
 
 ## Key Differences
 
-| Feature | Claude Code | OpenCode | Notes |
+| Feature | Gemini Code | OpenCode | Notes |
 |---------|-------------|----------|-------|
-| Configuration | `CLAUDE.md`, `plugin.json` | `opencode.json` | Different file formats |
+| Configuration | `GEMINI.md`, `plugin.json` | `opencode.json` | Different file formats |
 | Agents | Markdown frontmatter | JSON object | Full parity |
 | Commands | `commands/*.md` | `command` object or `.md` files | Full parity |
 | Skills | `skills/*/SKILL.md` | `instructions` array | Loaded as context |
@@ -20,11 +20,11 @@ OpenCode is an alternative CLI for AI-assisted development that supports **all**
 
 ## Hook Migration
 
-**OpenCode fully supports hooks** via its plugin system, which is actually MORE sophisticated than Claude Code with 20+ event types.
+**OpenCode fully supports hooks** via its plugin system, which is actually MORE sophisticated than Gemini Code with 20+ event types.
 
 ### Hook Event Mapping
 
-| Claude Code Hook | OpenCode Plugin Event | Notes |
+| Gemini Code Hook | OpenCode Plugin Event | Notes |
 |-----------------|----------------------|-------|
 | `PreToolUse` | `tool.execute.before` | Can modify tool input |
 | `PostToolUse` | `tool.execute.after` | Can modify tool output |
@@ -39,7 +39,7 @@ OpenCode is an alternative CLI for AI-assisted development that supports **all**
 
 ### Converting Hooks to Plugins
 
-**Claude Code hook (hooks.json):**
+**Gemini Code hook (hooks.json):**
 ```json
 {
   "PostToolUse": [{
@@ -128,7 +128,7 @@ opencode
 
 ### Agents
 
-**Claude Code:**
+**Gemini Code:**
 ```markdown
 ---
 name: planner
@@ -147,7 +147,7 @@ You are an expert planning specialist...
     "planner": {
       "description": "Expert planning specialist...",
       "mode": "subagent",
-      "model": "anthropic/claude-opus-4-5",
+      "model": "anthropic/gemini-opus-4-5",
       "prompt": "{file:.opencode/prompts/agents/planner.txt}",
       "tools": { "read": true, "bash": true }
     }
@@ -157,7 +157,7 @@ You are an expert planning specialist...
 
 ### Commands
 
-**Claude Code:**
+**Gemini Code:**
 ```markdown
 ---
 name: plan
@@ -192,7 +192,7 @@ Create a detailed implementation plan for: $ARGUMENTS
 
 ### Skills
 
-**Claude Code:** Skills are loaded from `skills/*/SKILL.md` files.
+**Gemini Code:** Skills are loaded from `skills/*/SKILL.md` files.
 
 **OpenCode:** Skills are added to the `instructions` array:
 ```json
@@ -207,7 +207,7 @@ Create a detailed implementation plan for: $ARGUMENTS
 
 ### Rules
 
-**Claude Code:** Rules are in separate `rules/*.md` files.
+**Gemini Code:** Rules are in separate `rules/*.md` files.
 
 **OpenCode:** Rules can be consolidated into `instructions` or kept separate:
 ```json
@@ -222,11 +222,11 @@ Create a detailed implementation plan for: $ARGUMENTS
 
 ## Model Mapping
 
-| Claude Code | OpenCode |
+| Gemini Code | OpenCode |
 |-------------|----------|
-| `opus` | `anthropic/claude-opus-4-5` |
-| `sonnet` | `anthropic/claude-sonnet-4-5` |
-| `haiku` | `anthropic/claude-haiku-4-5` |
+| `opus` | `anthropic/gemini-opus-4-5` |
+| `sonnet` | `anthropic/gemini-sonnet-4-5` |
+| `haiku` | `anthropic/gemini-haiku-4-5` |
 
 ## Available Commands
 
@@ -335,23 +335,23 @@ If you want the full ECC OpenCode workflow surface, use the repository's bundled
 
 ## Best Practices
 
-1. **Start Fresh**: Don't try to run both Claude Code and OpenCode simultaneously
+1. **Start Fresh**: Don't try to run both Gemini Code and OpenCode simultaneously
 2. **Check Configuration**: Verify `opencode.json` loads without errors
 3. **Test Commands**: Run each command once to verify it works
 4. **Use Plugins**: Leverage the plugin hooks for automation
 5. **Use Agents**: Leverage the specialized agents for their intended purposes
 
-## Reverting to Claude Code
+## Reverting to Gemini Code
 
 If you need to switch back:
 
-1. Simply run `claude` instead of `opencode`
-2. Claude Code will use its own configuration (`CLAUDE.md`, `plugin.json`, etc.)
-3. The `.opencode/` directory won't interfere with Claude Code
+1. Simply run `gemini` instead of `opencode`
+2. Gemini Code will use its own configuration (`GEMINI.md`, `plugin.json`, etc.)
+3. The `.opencode/` directory won't interfere with Gemini Code
 
 ## Feature Parity Summary
 
-| Feature | Claude Code | OpenCode | Status |
+| Feature | Gemini Code | OpenCode | Status |
 |---------|-------------|----------|--------|
 | Agents | ✅ 12 agents | ✅ 12 agents | **Full parity** |
 | Commands | ✅ 23 commands | ✅ 23 commands | **Full parity** |
@@ -365,4 +365,4 @@ If you need to switch back:
 
 For issues specific to:
 - **OpenCode CLI**: Report to OpenCode's issue tracker
-- **ECC Configuration**: Report to [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
+- **ECC Configuration**: Report to [github.com/affaan-m/everything-gemini-code](https://github.com/affaan-m/everything-gemini-code)

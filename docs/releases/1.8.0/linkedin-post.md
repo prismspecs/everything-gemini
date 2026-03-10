@@ -6,7 +6,7 @@ This release improves:
 - hook reliability and lifecycle behavior
 - eval-driven engineering workflows
 - operator tooling for autonomous loops
-- cross-platform support for Claude Code, Cursor, OpenCode, and Codex
+- cross-platform support for Gemini Code, Cursor, OpenCode, and Codex
 
 We also shipped NanoClaw v2 with stronger session operations for real workflow usage.
 

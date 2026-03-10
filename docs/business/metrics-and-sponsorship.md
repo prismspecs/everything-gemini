@@ -28,15 +28,15 @@ curl -s https://api.npmjs.org/downloads/point/last-month/ecc-agentshield
 ### GitHub repository adoption
 
 ```bash
-gh api repos/affaan-m/everything-claude-code \
+gh api repos/affaan-m/everything-gemini-code \
   --jq '{stars:.stargazers_count,forks:.forks_count,contributors_url:.contributors_url,open_issues:.open_issues_count}'
 ```
 
 ### GitHub traffic (maintainer access required)
 
 ```bash
-gh api repos/affaan-m/everything-claude-code/traffic/views
-gh api repos/affaan-m/everything-claude-code/traffic/clones
+gh api repos/affaan-m/everything-gemini-code/traffic/views
+gh api repos/affaan-m/everything-gemini-code/traffic/clones
 ```
 
 ### GitHub App installs
@@ -48,7 +48,7 @@ Use the latest value from:
 
 ## What Cannot Be Measured Publicly (Yet)
 
-- Claude plugin install/download counts are not currently exposed via a public API.
+- Gemini plugin install/download counts are not currently exposed via a public API.
 - For partner conversations, use npm metrics + GitHub App installs + repo traffic as the proxy bundle.
 
 ## Suggested Sponsor Packaging
@@ -68,7 +68,7 @@ Use this on calls:
 
 > ECC is now positioned as an agent harness performance system, not a config repo.  
 > We track adoption through npm distribution, GitHub App installs, and repository growth.  
-> Claude plugin installs are structurally undercounted publicly, so we use a blended metrics model.  
-> The project supports Claude Code, Cursor, OpenCode, and Codex app/CLI with production-grade hook reliability and a large passing test suite.
+> Gemini plugin installs are structurally undercounted publicly, so we use a blended metrics model.  
+> The project supports Gemini Code, Cursor, OpenCode, and Codex app/CLI with production-grade hook reliability and a large passing test suite.
 
 For launch-ready social copy snippets, see [`social-launch-copy.md`](./social-launch-copy.md).

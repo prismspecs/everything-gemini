@@ -12,13 +12,13 @@ Show instinct status from continuous-learning-v2: $ARGUMENTS
 Run:
 
 ```bash
-python3 "${CLAUDE_PLUGIN_ROOT}/skills/continuous-learning-v2/scripts/instinct-cli.py" status
+python3 "${GEMINI_PLUGIN_ROOT}/skills/continuous-learning-v2/scripts/instinct-cli.py" status
 ```
 
-If `CLAUDE_PLUGIN_ROOT` is unavailable, use:
+If `GEMINI_PLUGIN_ROOT` is unavailable, use:
 
 ```bash
-python3 ~/.claude/skills/continuous-learning-v2/scripts/instinct-cli.py status
+python3 ~/.gemini/skills/continuous-learning-v2/scripts/instinct-cli.py status
 ```
 
 ## Behavior Notes

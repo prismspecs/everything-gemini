@@ -5,7 +5,7 @@ ECC v1.8.0 references research and workflow inspiration from:
 - `plankton`
 - `ralphinho`
 - `infinite-agentic-loop`
-- `continuous-claude`
+- `continuous-gemini`
 - public profiles: [zarazhangrui](https://github.com/zarazhangrui), [humanplane](https://github.com/humanplane)
 
 ## Policy

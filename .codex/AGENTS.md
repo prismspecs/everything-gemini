@@ -39,12 +39,12 @@ Available skills:
 
 Configure in `~/.codex/config.toml` under `[mcp_servers]`. See `.codex/config.toml` for reference configuration with GitHub, Context7, Memory, and Sequential Thinking servers.
 
-## Key Differences from Claude Code
+## Key Differences from Gemini Code
 
-| Feature | Claude Code | Codex CLI |
+| Feature | Gemini Code | Codex CLI |
 |---------|------------|-----------|
 | Hooks | 8+ event types | Not yet supported |
-| Context file | CLAUDE.md + AGENTS.md | AGENTS.md only |
+| Context file | GEMINI.md + AGENTS.md | AGENTS.md only |
 | Skills | Skills loaded via plugin | `.agents/skills/` directory |
 | Commands | `/slash` commands | Instruction-based |
 | Agents | Subagent Task tool | Single agent model |

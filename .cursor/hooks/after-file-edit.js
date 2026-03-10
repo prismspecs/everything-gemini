@@ -1,17 +1,17 @@
 #!/usr/bin/env node
-const { readStdin, runExistingHook, transformToClaude } = require('./adapter');
+const { readStdin, runExistingHook, transformToGemini } = require('./adapter');
 readStdin().then(raw => {
   try {
     const input = JSON.parse(raw);
-    const claudeInput = transformToClaude(input, {
+    const geminiInput = transformToGemini(input, {
       tool_input: { file_path: input.path || input.file || '' }
     });
-    const claudeStr = JSON.stringify(claudeInput);
+    const geminiStr = JSON.stringify(geminiInput);
 
     // Run format, typecheck, and console.log warning sequentially
-    runExistingHook('post-edit-format.js', claudeStr);
-    runExistingHook('post-edit-typecheck.js', claudeStr);
-    runExistingHook('post-edit-console-warn.js', claudeStr);
+    runExistingHook('post-edit-format.js', geminiStr);
+    runExistingHook('post-edit-typecheck.js', geminiStr);
+    runExistingHook('post-edit-console-warn.js', geminiStr);
   } catch {}
   process.stdout.write(raw);
 }).catch(() => process.exit(0));

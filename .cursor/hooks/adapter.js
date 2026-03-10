@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Cursor-to-Claude Code Hook Adapter
- * Transforms Cursor stdin JSON to Claude Code hook format,
+ * Cursor-to-Gemini Code Hook Adapter
+ * Transforms Cursor stdin JSON to Gemini Code hook format,
  * then delegates to existing scripts/hooks/*.js
  */
 
@@ -25,7 +25,7 @@ function getPluginRoot() {
   return path.resolve(__dirname, '..', '..');
 }
 
-function transformToClaude(cursorInput, overrides = {}) {
+function transformToGemini(cursorInput, overrides = {}) {
   return {
     tool_input: {
       command: cursorInput.command || cursorInput.args?.command || '',
@@ -78,4 +78,4 @@ function hookEnabled(hookId, allowedProfiles = ['standard', 'strict']) {
   return allowedProfiles.includes(profile);
 }
 
-module.exports = { readStdin, getPluginRoot, transformToClaude, runExistingHook, hookEnabled };
+module.exports = { readStdin, getPluginRoot, transformToGemini, runExistingHook, hookEnabled };

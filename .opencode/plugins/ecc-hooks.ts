@@ -1,9 +1,9 @@
 /**
- * Everything Claude Code (ECC) Plugin Hooks for OpenCode
+ * Everything Gemini Code (ECC) Plugin Hooks for OpenCode
  *
- * This plugin translates Claude Code hooks to OpenCode's plugin system.
- * OpenCode's plugin system is MORE sophisticated than Claude Code with 20+ events
- * compared to Claude Code's 3 phases (PreToolUse, PostToolUse, Stop).
+ * This plugin translates Gemini Code hooks to OpenCode's plugin system.
+ * OpenCode's plugin system is MORE sophisticated than Gemini Code with 20+ events
+ * compared to Gemini Code's 3 phases (PreToolUse, PostToolUse, Stop).
  *
  * Hook Event Mapping:
  * - PreToolUse → tool.execute.before
@@ -67,7 +67,7 @@ export const ECCHooksPlugin = async ({
   return {
     /**
      * Prettier Auto-Format Hook
-     * Equivalent to Claude Code PostToolUse hook for prettier
+     * Equivalent to Gemini Code PostToolUse hook for prettier
      *
      * Triggers: After any JS/TS/JSX/TSX file is edited
      * Action: Runs prettier --write on the file
@@ -105,7 +105,7 @@ export const ECCHooksPlugin = async ({
 
     /**
      * TypeScript Check Hook
-     * Equivalent to Claude Code PostToolUse hook for tsc
+     * Equivalent to Gemini Code PostToolUse hook for tsc
      *
      * Triggers: After edit tool completes on .ts/.tsx files
      * Action: Runs tsc --noEmit to check for type errors
@@ -146,7 +146,7 @@ export const ECCHooksPlugin = async ({
 
     /**
      * Pre-Tool Security Check
-     * Equivalent to Claude Code PreToolUse hook
+     * Equivalent to Gemini Code PreToolUse hook
      *
      * Triggers: Before tool execution
      * Action: Warns about potential security issues
@@ -206,7 +206,7 @@ export const ECCHooksPlugin = async ({
 
     /**
      * Session Created Hook
-     * Equivalent to Claude Code SessionStart hook
+     * Equivalent to Gemini Code SessionStart hook
      *
      * Triggers: When a new session starts
      * Action: Loads context and displays welcome message
@@ -218,18 +218,18 @@ export const ECCHooksPlugin = async ({
 
       // Check for project-specific context files
       try {
-        const hasClaudeMd = await $`test -f ${worktree}/CLAUDE.md && echo "yes"`.text()
-        if (hasClaudeMd.trim() === "yes") {
-          log("info", "[ECC] Found CLAUDE.md - loading project context")
+        const hasGeminiMd = await $`test -f ${worktree}/GEMINI.md && echo "yes"`.text()
+        if (hasGeminiMd.trim() === "yes") {
+          log("info", "[ECC] Found GEMINI.md - loading project context")
         }
       } catch {
-        // No CLAUDE.md found
+        // No GEMINI.md found
       }
     },
 
     /**
      * Session Idle Hook
-     * Equivalent to Claude Code Stop hook
+     * Equivalent to Gemini Code Stop hook
      *
      * Triggers: When session becomes idle (task completed)
      * Action: Runs console.log audit on all edited files
@@ -284,7 +284,7 @@ export const ECCHooksPlugin = async ({
 
     /**
      * Session Deleted Hook
-     * Equivalent to Claude Code SessionEnd hook
+     * Equivalent to Gemini Code SessionEnd hook
      *
      * Triggers: When session ends
      * Action: Final cleanup and state saving
@@ -392,7 +392,7 @@ export const ECCHooksPlugin = async ({
       const contextBlock = [
         "# ECC Context (preserve across compaction)",
         "",
-        "## Active Plugin: Everything Claude Code v1.8.0",
+        "## Active Plugin: Everything Gemini Code v1.8.0",
         "- Hooks: file.edited, tool.execute.before/after, session.created/idle/deleted, shell.env, compacting, permission.ask",
         "- Tools: run-tests, check-coverage, security-audit, format-code, lint-check, git-summary",
         "- Agents: 13 specialized (planner, architect, tdd-guide, code-reviewer, security-reviewer, build-error-resolver, e2e-runner, refactor-cleaner, doc-updater, go-reviewer, go-build-resolver, database-reviewer, python-reviewer)",

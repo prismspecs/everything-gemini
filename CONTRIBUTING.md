@@ -1,6 +1,6 @@
-# Contributing to Everything Claude Code
+# Contributing to Everything Gemini Code
 
-Thanks for wanting to contribute! This repo is a community resource for Claude Code users.
+Thanks for wanting to contribute! This repo is a community resource for Gemini Code users.
 
 ## Table of Contents
 
@@ -49,8 +49,8 @@ Slash commands that invoke useful workflows:
 
 ```bash
 # 1. Fork and clone
-gh repo fork affaan-m/everything-claude-code --clone
-cd everything-claude-code
+gh repo fork affaan-m/everything-gemini-code --clone
+cd everything-gemini-code
 
 # 2. Create a branch
 git checkout -b feat/my-contribution
@@ -58,8 +58,8 @@ git checkout -b feat/my-contribution
 # 3. Add your contribution (see sections below)
 
 # 4. Test locally
-cp -r skills/my-skill ~/.claude/skills/  # for skills
-# Then test with Claude Code
+cp -r skills/my-skill ~/.gemini/skills/  # for skills
+# Then test with Gemini Code
 
 # 5. Submit PR
 git add . && git commit -m "feat: add my-skill" && git push -u origin feat/my-contribution
@@ -69,7 +69,7 @@ git add . && git commit -m "feat: add my-skill" && git push -u origin feat/my-co
 
 ## Contributing Skills
 
-Skills are knowledge modules that Claude Code loads based on context.
+Skills are knowledge modules that Gemini Code loads based on context.
 
 ### Directory Structure
 
@@ -122,7 +122,7 @@ Describe scenarios where this skill applies.
 - [ ] Includes practical code examples
 - [ ] Under 500 lines
 - [ ] Uses clear section headers
-- [ ] Tested with Claude Code
+- [ ] Tested with Gemini Code
 
 ### Example Skills
 
@@ -150,7 +150,7 @@ agents/your-agent-name.md
 ```markdown
 ---
 name: your-agent-name
-description: What this agent does and when Claude should invoke it. Be specific!
+description: What this agent does and when Gemini should invoke it. Be specific!
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---
@@ -208,7 +208,7 @@ Output: [what you return]
 
 ## Contributing Hooks
 
-Hooks are automatic behaviors triggered by Claude Code events.
+Hooks are automatic behaviors triggered by Gemini Code events.
 
 ### File Location
 
@@ -377,7 +377,7 @@ How you tested this.
 
 ## Checklist
 - [ ] Follows format guidelines
-- [ ] Tested with Claude Code
+- [ ] Tested with Gemini Code
 - [ ] No sensitive info (API keys, paths)
 - [ ] Clear descriptions
 ```
@@ -417,7 +417,7 @@ How you tested this.
 
 ## Questions?
 
-- **Issues:** [github.com/affaan-m/everything-claude-code/issues](https://github.com/affaan-m/everything-claude-code/issues)
+- **Issues:** [github.com/affaan-m/everything-gemini-code/issues](https://github.com/affaan-m/everything-gemini-code/issues)
 - **X/Twitter:** [@affaanmustafa](https://x.com/affaanmustafa)
 
 ---

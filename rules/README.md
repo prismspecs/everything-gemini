@@ -1,4 +1,4 @@
-# Rules
+## Rules
 ## Structure
 
 Rules are organized into a **common** layer plus **language-specific** directories:
@@ -11,7 +11,6 @@ rules/
 │   ├── testing.md
 │   ├── performance.md
 │   ├── patterns.md
-│   ├── hooks.md
 │   ├── agents.md
 │   └── security.md
 ├── typescript/      # TypeScript/JavaScript specific
@@ -23,7 +22,24 @@ rules/
 - **common/** contains universal principles — no language-specific code examples.
 - **Language directories** extend the common rules with framework-specific patterns, tools, and code examples. Each file references its common counterpart.
 
+## Usage in Gemini CLI
+
+Gemini CLI supports importing rule files directly into your project's `GEMINI.md` context file using the `@` symbol.
+
+```markdown
+# Project Context
+
+## General Rules
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+
+## TypeScript Specifics
+@~/.gemini/rules/typescript/coding-style.md
+@~/.gemini/rules/typescript/testing.md
+```
+
 ## Installation
+
 
 ### Option 1: Install Script (Recommended)
 
@@ -48,13 +64,13 @@ rules/
 
 ```bash
 # Install common rules (required for all projects)
-cp -r rules/common ~/.claude/rules/common
+cp -r rules/common ~/.gemini/rules/common
 
 # Install language-specific rules based on your project's tech stack
-cp -r rules/typescript ~/.claude/rules/typescript
-cp -r rules/python ~/.claude/rules/python
-cp -r rules/golang ~/.claude/rules/golang
-cp -r rules/swift ~/.claude/rules/swift
+cp -r rules/typescript ~/.gemini/rules/typescript
+cp -r rules/python ~/.gemini/rules/python
+cp -r rules/golang ~/.gemini/rules/golang
+cp -r rules/swift ~/.gemini/rules/swift
 
 # Attention ! ! ! Configure according to your actual project requirements; the configuration here is for reference only.
 ```
@@ -75,7 +91,6 @@ To add support for a new language (e.g., `rust/`):
    - `coding-style.md` — formatting tools, idioms, error handling patterns
    - `testing.md` — test framework, coverage tools, test organization
    - `patterns.md` — language-specific design patterns
-   - `hooks.md` — PostToolUse hooks for formatters, linters, type checkers
    - `security.md` — secret management, security scanning tools
 3. Each file should start with:
    ```

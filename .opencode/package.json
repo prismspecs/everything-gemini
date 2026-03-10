@@ -1,7 +1,7 @@
 {
   "name": "ecc-universal",
   "version": "1.8.0",
-  "description": "Everything Claude Code (ECC) plugin for OpenCode - agents, commands, hooks, and skills",
+  "description": "Everything Gemini Code (ECC) plugin for OpenCode - agents, commands, hooks, and skills",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -35,7 +35,7 @@
   "keywords": [
     "opencode",
     "plugin",
-    "claude-code",
+    "gemini-code",
     "agents",
     "ecc",
     "ai-coding",
@@ -47,12 +47,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/affaan-m/everything-claude-code.git"
+    "url": "git+https://github.com/affaan-m/everything-gemini-code.git"
   },
   "bugs": {
-    "url": "https://github.com/affaan-m/everything-claude-code/issues"
+    "url": "https://github.com/affaan-m/everything-gemini-code/issues"
   },
-  "homepage": "https://github.com/affaan-m/everything-claude-code#readme",
+  "homepage": "https://github.com/affaan-m/everything-gemini-code#readme",
   "publishConfig": {
     "access": "public"
   },

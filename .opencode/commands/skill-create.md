@@ -5,7 +5,7 @@ agent: build
 
 # Skill Create Command
 
-Analyze git history to generate Claude Code skills: $ARGUMENTS
+Analyze git history to generate Gemini Code skills: $ARGUMENTS
 
 ## Your Task
 

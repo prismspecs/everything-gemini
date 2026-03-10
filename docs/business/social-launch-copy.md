@@ -10,7 +10,7 @@ ECC v1.8.0 is live.
 We moved from “config pack” to an agent harness performance system:
 - hook reliability fixes
 - new harness commands
-- cross-tool parity (Claude Code, Cursor, OpenCode, Codex)
+- cross-tool parity (Gemini Code, Cursor, OpenCode, Codex)
 
 Start here: <repo-link>
 ```
@@ -55,7 +55,7 @@ We shipped ECC v1.8.0 with one objective: improve agent harness performance in p
 Highlights:
 - more reliable hook lifecycle behavior
 - new harness-level quality commands
-- parity across Claude Code, Cursor, OpenCode, and Codex
+- parity across Gemini Code, Cursor, OpenCode, and Codex
 - stronger sponsor-facing metrics tracking
 
 If your team runs AI coding agents daily, this is designed for operational use.

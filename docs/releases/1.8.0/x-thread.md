@@ -8,4 +8,4 @@
 
 4/ If your agents are underperforming, start with `/harness-audit` and tighten quality gates.
 
-5/ Cross-harness parity remains a priority: Claude Code, Cursor, OpenCode, Codex.
+5/ Cross-harness parity remains a priority: Gemini Code, Cursor, OpenCode, Codex.

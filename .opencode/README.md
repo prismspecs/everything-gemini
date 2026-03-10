@@ -3,13 +3,13 @@
 > ⚠️ This README is specific to OpenCode usage.  
 > If you installed ECC via npm (e.g. `npm install opencode-ecc`), refer to the root README instead.
 
-Everything Claude Code (ECC) plugin for OpenCode - agents, commands, hooks, and skills.
+Everything Gemini Code (ECC) plugin for OpenCode - agents, commands, hooks, and skills.
 
 ## Installation
 
 ## Installation Overview
 
-There are two ways to use Everything Claude Code (ECC):
+There are two ways to use Everything Gemini Code (ECC):
 
 1. **npm package (recommended for most users)**  
    Install via npm/bun/yarn and use the `ecc-install` CLI to set up rules and agents.
@@ -52,8 +52,8 @@ npx ecc-install typescript
 Clone and run OpenCode in the repository:
 
 ```bash
-git clone https://github.com/affaan-m/everything-claude-code
-cd everything-claude-code
+git clone https://github.com/affaan-m/everything-gemini-code
+cd everything-gemini-code
 opencode
 ```
 
@@ -132,9 +132,9 @@ opencode
 
 ## Hook Event Mapping
 
-OpenCode's plugin system maps to Claude Code hooks:
+OpenCode's plugin system maps to Gemini Code hooks:
 
-| Claude Code | OpenCode |
+| Gemini Code | OpenCode |
 |-------------|----------|
 | PreToolUse | `tool.execute.before` |
 | PostToolUse | `tool.execute.after` |
@@ -142,11 +142,11 @@ OpenCode's plugin system maps to Claude Code hooks:
 | SessionStart | `session.created` |
 | SessionEnd | `session.deleted` |
 
-OpenCode has 20+ additional events not available in Claude Code.
+OpenCode has 20+ additional events not available in Gemini Code.
 
 ### Hook Runtime Controls
 
-OpenCode plugin hooks honor the same runtime controls used by Claude Code/Cursor:
+OpenCode plugin hooks honor the same runtime controls used by Gemini Code/Cursor:
 
 ```bash
 export ECC_HOOK_PROFILE=standard
@@ -187,8 +187,8 @@ Full configuration in `opencode.json`:
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "anthropic/claude-sonnet-4-5",
-  "small_model": "anthropic/claude-haiku-4-5",
+  "model": "anthropic/gemini-sonnet-4-5",
+  "small_model": "anthropic/gemini-haiku-4-5",
   "plugin": ["./.opencode/plugins"],
   "instructions": [
     "skills/tdd-workflow/SKILL.md",

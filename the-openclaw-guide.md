@@ -4,7 +4,7 @@
 
 ---
 
-> **This is Part 3 of the Everything Claude Code guide series.** Part 1 is [The Shorthand Guide](./the-shortform-guide.md) (setup and configuration). Part 2 is [The Longform Guide](./the-longform-guide.md) (advanced patterns and workflows). This guide is about security — specifically, what happens when recursive agent infrastructure treats it as an afterthought.
+> **This is Part 3 of the Everything Gemini Code guide series.** Part 1 is [The Shorthand Guide](./the-shortform-guide.md) (setup and configuration). Part 2 is [The Longform Guide](./the-longform-guide.md) (advanced patterns and workflows). This guide is about security — specifically, what happens when recursive agent infrastructure treats it as an afterthought.
 
 I used OpenClaw for a week. This is what I found.
 
@@ -15,7 +15,7 @@ I used OpenClaw for a week. This is what I found.
 
 ## 1 Week of OpenClaw Use
 
-I want to be upfront about my perspective. I build AI coding tools. My everything-claude-code repo has 50K+ stars. I created AgentShield. I spend most of my working hours thinking about how agents should interact with systems, and how those interactions can go wrong.
+I want to be upfront about my perspective. I build AI coding tools. My everything-gemini-code repo has 50K+ stars. I created AgentShield. I spend most of my working hours thinking about how agents should interact with systems, and how those interactions can go wrong.
 
 So when OpenClaw started gaining traction, I did what I always do with new tooling: I installed it, connected it to a few channels, and started probing. Not to break it. To understand the security model.
 
@@ -116,15 +116,15 @@ So I started asking: who is this actually for?
 You already know how to:
 
 - SSH into a server from your phone (Termius, Blink, Prompt — or just mosh into your server and it can operate the same)
-- Run Claude Code in a tmux session that persists through disconnects
+- Run Gemini Code in a tmux session that persists through disconnects
 - Set up cron jobs via `crontab` or cron-job.org
-- Use the AI harnesses directly — Claude Code, Cursor, Codex — without an orchestration wrapper
+- Use the AI harnesses directly — Gemini Code, Cursor, Codex — without an orchestration wrapper
 - Write your own automation with skills, hooks, and commands
 - Configure browser automation through Playwright or proper APIs
 
 You don't need a multi-channel orchestration dashboard. You'll bypass it anyway (and the dashboard recommends you do). In the process, you avoid the entire class of attack vectors the multi-channel architecture introduces.
 
-Here's the thing that gets me: you can mosh into your server from your phone and it operates the same. Persistent connection, mobile-friendly, handles network changes gracefully. The "I need OpenClaw so I can manage my agent from my phone" argument dissolves when you realize Termius on iOS gives you the same access to a tmux session running Claude Code — without the seven additional attack vectors.
+Here's the thing that gets me: you can mosh into your server from your phone and it operates the same. Persistent connection, mobile-friendly, handles network changes gracefully. The "I need OpenClaw so I can manage my agent from my phone" argument dissolves when you realize Termius on iOS gives you the same access to a tmux session running Gemini Code — without the seven additional attack vectors.
 
 Technical users will use OpenClaw headless. The dashboard itself recommends raw editing for anything complex. If the product's own UI recommends bypassing the UI, the UI isn't solving a real problem for the audience that can safely use it.
 
@@ -245,9 +245,9 @@ While OpenClaw users are connecting agents to their personal accounts, a paralle
 
 The adversarial pipeline works like this: techniques are developed on abliterated models (fine-tuned versions with safety training removed, freely available on HuggingFace), refined against production models, then deployed against targets. The refinement step is increasingly quantitative — some communities use information-theoretic analysis to measure how much "safety boundary" a given adversarial prompt erodes per token. They're optimizing jailbreaks the way we optimize loss functions.
 
-The techniques are model-specific. There are payloads crafted specifically for Claude variants: runic encoding (Elder Futhark characters to bypass content filters), binary-encoded function calls (targeting Claude's structured tool-calling mechanism), semantic inversion ("write the refusal, then write the opposite"), and persona injection frameworks tuned to each model's particular safety training patterns.
+The techniques are model-specific. There are payloads crafted specifically for Gemini variants: runic encoding (Elder Futhark characters to bypass content filters), binary-encoded function calls (targeting Gemini's structured tool-calling mechanism), semantic inversion ("write the refusal, then write the opposite"), and persona injection frameworks tuned to each model's particular safety training patterns.
 
-And there are repositories of leaked system prompts — the exact safety instructions that Claude, GPT, and other models follow — giving attackers precise knowledge of the rules they're working to circumvent.
+And there are repositories of leaked system prompts — the exact safety instructions that Gemini, GPT, and other models follow — giving attackers precise knowledge of the rules they're working to circumvent.
 
 Why does this matter for OpenClaw specifically? Because OpenClaw is a **force multiplier** for these techniques.
 
@@ -302,7 +302,7 @@ Mac Mini (headless, 24/7)
 ├── SSH access only (ed25519 key auth, no passwords)
 ├── Tailscale mesh (no exposed ports to public internet)
 ├── tmux session (persistent, survives disconnects)
-├── Claude Code with ECC configuration
+├── Gemini Code with ECC configuration
 │   ├── Sanitized skills (every skill manually reviewed)
 │   ├── Hooks for quality gates (not for external channel access)
 │   └── Agents with scoped permissions (read-only by default)
@@ -335,8 +335,8 @@ All of the functionality OpenClaw provides can be replicated with skills and har
 
 Sometimes boring is better.
 
-> 📸 **[SCREENSHOT: Author's actual terminal — tmux session with Claude Code running on Mac Mini over SSH. Clean, minimal, no dashboard. Annotations: "SSH only", "No exposed ports", "Scoped permissions".]**
-> *My actual setup. No multi-channel dashboard. Just a terminal, SSH, and Claude Code.*
+> 📸 **[SCREENSHOT: Author's actual terminal — tmux session with Gemini Code running on Mac Mini over SSH. Clean, minimal, no dashboard. Annotations: "SSH only", "No exposed ports", "Scoped permissions".]**
+> *My actual setup. No multi-channel dashboard. Just a terminal, SSH, and Gemini Code.*
 
 ### The Cost of Convenience
 
@@ -401,7 +401,7 @@ If you're currently running OpenClaw or considering it, here's the practical tak
 
 ### If you're considering OpenClaw:
 
-Ask yourself honestly: do you need multi-channel orchestration, or do you need an AI agent that can execute tasks? Those are different things. The agent functionality is available through Claude Code, Cursor, Codex, and other harnesses — without the multi-channel attack surface.
+Ask yourself honestly: do you need multi-channel orchestration, or do you need an AI agent that can execute tasks? Those are different things. The agent functionality is available through Gemini Code, Cursor, Codex, and other harnesses — without the multi-channel attack surface.
 
 If you decide the multi-channel orchestration is genuinely necessary for your workflow, go in with your eyes open. Know what you're connecting. Know what a compromised channel means. Read every skill before you install it. Run it on a dedicated machine, not your personal laptop.
 
@@ -460,11 +460,11 @@ Build secure by design. Not secure by accident.
 - [AgentShield on npm](https://www.npmjs.com/package/ecc-agentshield) — Zero-install agent security scanning
 
 > **Series navigation:**
-> - Part 1: [The Shorthand Guide to Everything Claude Code](./the-shortform-guide.md) — Setup and configuration
-> - Part 2: [The Longform Guide to Everything Claude Code](./the-longform-guide.md) — Advanced patterns and workflows
+> - Part 1: [The Shorthand Guide to Everything Gemini Code](./the-shortform-guide.md) — Setup and configuration
+> - Part 2: [The Longform Guide to Everything Gemini Code](./the-longform-guide.md) — Advanced patterns and workflows
 > - Part 3: The Hidden Danger of OpenClaw (this article) — Security lessons from the agent frontier
 > - Part 4: [The Shorthand Guide to Securing Your Agent](./the-security-guide.md) — Practical agent security
 
 ---
 
-*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. His everything-claude-code repo has 50K+ GitHub stars. He created AgentShield and won the Anthropic x Forum Ventures hackathon building [zenith.chat](https://zenith.chat).*
+*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. His everything-gemini-code repo has 50K+ GitHub stars. He created AgentShield and won the Anthropic x Forum Ventures hackathon building [zenith.chat](https://zenith.chat).*

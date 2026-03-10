@@ -2,7 +2,7 @@
 # Continuous Learning v2 - Observer background loop
 
 set +e
-unset CLAUDECODE
+unset GEMINICODE
 
 SLEEP_PID=""
 USR1_FIRED=0
@@ -29,12 +29,12 @@ analyze_observations() {
   echo "[$(date)] Analyzing $obs_count observations for project ${PROJECT_NAME}..." >> "$LOG_FILE"
 
   if [ "${CLV2_IS_WINDOWS:-false}" = "true" ] && [ "${ECC_OBSERVER_ALLOW_WINDOWS:-false}" != "true" ]; then
-    echo "[$(date)] Skipping claude analysis on Windows due to known non-interactive hang issue (#295). Set ECC_OBSERVER_ALLOW_WINDOWS=true to override." >> "$LOG_FILE"
+    echo "[$(date)] Skipping gemini analysis on Windows due to known non-interactive hang issue (#295). Set ECC_OBSERVER_ALLOW_WINDOWS=true to override." >> "$LOG_FILE"
     return
   fi
 
-  if ! command -v claude >/dev/null 2>&1; then
-    echo "[$(date)] claude CLI not found, skipping analysis" >> "$LOG_FILE"
+  if ! command -v gemini >/dev/null 2>&1; then
+    echo "[$(date)] gemini CLI not found, skipping analysis" >> "$LOG_FILE"
     return
   fi
 
@@ -80,25 +80,25 @@ PROMPT
   timeout_seconds="${ECC_OBSERVER_TIMEOUT_SECONDS:-120}"
   exit_code=0
 
-  claude --model haiku --max-turns 3 --print < "$prompt_file" >> "$LOG_FILE" 2>&1 &
-  claude_pid=$!
+  gemini --model haiku --max-turns 3 --print < "$prompt_file" >> "$LOG_FILE" 2>&1 &
+  gemini_pid=$!
 
   (
     sleep "$timeout_seconds"
-    if kill -0 "$claude_pid" 2>/dev/null; then
-      echo "[$(date)] Claude analysis timed out after ${timeout_seconds}s; terminating process" >> "$LOG_FILE"
-      kill "$claude_pid" 2>/dev/null || true
+    if kill -0 "$gemini_pid" 2>/dev/null; then
+      echo "[$(date)] Gemini analysis timed out after ${timeout_seconds}s; terminating process" >> "$LOG_FILE"
+      kill "$gemini_pid" 2>/dev/null || true
     fi
   ) &
   watchdog_pid=$!
 
-  wait "$claude_pid"
+  wait "$gemini_pid"
   exit_code=$?
   kill "$watchdog_pid" 2>/dev/null || true
   rm -f "$prompt_file"
 
   if [ "$exit_code" -ne 0 ]; then
-    echo "[$(date)] Claude analysis failed (exit $exit_code)" >> "$LOG_FILE"
+    echo "[$(date)] Gemini analysis failed (exit $exit_code)" >> "$LOG_FILE"
   fi
 
   if [ -f "$OBSERVATIONS_FILE" ]; then

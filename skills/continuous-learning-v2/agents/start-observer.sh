@@ -15,7 +15,7 @@
 set -e
 
 # NOTE: set -e is disabled inside the background subshell below
-# to prevent claude CLI failures from killing the observer loop.
+# to prevent gemini CLI failures from killing the observer loop.
 
 # ─────────────────────────────────────────────
 # Project detection
@@ -34,7 +34,7 @@ PYTHON_CMD="${CLV2_PYTHON_CMD:-}"
 # Configuration
 # ─────────────────────────────────────────────
 
-CONFIG_DIR="${HOME}/.claude/homunculus"
+CONFIG_DIR="${HOME}/.gemini/homunculus"
 CONFIG_FILE="${SKILL_ROOT}/config.json"
 # PID file is project-scoped so each project can have its own observer
 PID_FILE="${PROJECT_DIR}/.observer.pid"

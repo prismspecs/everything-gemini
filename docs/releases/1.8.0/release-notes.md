@@ -9,7 +9,7 @@ ECC v1.8.0 positions the project as an agent harness performance system, not jus
 - Stabilized hooks and lifecycle behavior.
 - Expanded eval and loop operations surface.
 - Upgraded NanoClaw for operational use.
-- Improved cross-harness parity (Claude Code, Cursor, OpenCode, Codex).
+- Improved cross-harness parity (Gemini Code, Cursor, OpenCode, Codex).
 
 ## Upgrade Focus
 

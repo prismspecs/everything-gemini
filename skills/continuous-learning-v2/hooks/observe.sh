@@ -2,13 +2,13 @@
 # Continuous Learning v2 - Observation Hook
 #
 # Captures tool use events for pattern analysis.
-# Claude Code passes hook data via stdin as JSON.
+# Gemini Code passes hook data via stdin as JSON.
 #
 # v2.1: Project-scoped observations — detects current project context
 #       and writes observations to project-specific directory.
 #
 # Registered via plugin hooks/hooks.json (auto-loaded when plugin is enabled).
-# Can also be registered manually in ~/.claude/settings.json.
+# Can also be registered manually in ~/.gemini/settings.json.
 
 set -e
 
@@ -19,7 +19,7 @@ HOOK_PHASE="${1:-post}"
 # Read stdin first (before project detection)
 # ─────────────────────────────────────────────
 
-# Read JSON from stdin (Claude Code hook format)
+# Read JSON from stdin (Gemini Code hook format)
 INPUT_JSON=$(cat)
 
 # Exit if no input
@@ -70,7 +70,7 @@ except(KeyError, TypeError, ValueError):
 
 # If cwd was provided in stdin, use it for project detection
 if [ -n "$STDIN_CWD" ] && [ -d "$STDIN_CWD" ]; then
-  export CLAUDE_PROJECT_DIR="$STDIN_CWD"
+  export GEMINI_PROJECT_DIR="$STDIN_CWD"
 fi
 
 # ─────────────────────────────────────────────
@@ -89,7 +89,7 @@ PYTHON_CMD="${CLV2_PYTHON_CMD:-$PYTHON_CMD}"
 # Configuration
 # ─────────────────────────────────────────────
 
-CONFIG_DIR="${HOME}/.claude/homunculus"
+CONFIG_DIR="${HOME}/.gemini/homunculus"
 OBSERVATIONS_FILE="${PROJECT_DIR}/observations.jsonl"
 MAX_FILE_SIZE_MB=10
 
@@ -106,7 +106,7 @@ if [ ! -f "$PURGE_MARKER" ] || [ "$(find "$PURGE_MARKER" -mtime +1 2>/dev/null)"
 fi
 
 # Parse using Python via stdin pipe (safe for all JSON payloads)
-# Pass HOOK_PHASE via env var since Claude Code does not include hook type in stdin JSON
+# Pass HOOK_PHASE via env var since Gemini Code does not include hook type in stdin JSON
 PARSED=$(echo "$INPUT_JSON" | HOOK_PHASE="$HOOK_PHASE" "$PYTHON_CMD" -c '
 import json
 import sys
@@ -116,12 +116,12 @@ try:
     data = json.load(sys.stdin)
 
     # Determine event type from CLI argument passed via env var.
-    # Claude Code does NOT include a "hook_type" field in the stdin JSON,
+    # Gemini Code does NOT include a "hook_type" field in the stdin JSON,
     # so we rely on the shell argument ("pre" or "post") instead.
     hook_phase = os.environ.get("HOOK_PHASE", "post")
     event = "tool_start" if hook_phase == "pre" else "tool_complete"
 
-    # Extract fields - Claude Code hook format
+    # Extract fields - Gemini Code hook format
     tool_name = data.get("tool_name", data.get("tool", "unknown"))
     tool_input = data.get("tool_input", data.get("input", {}))
     tool_output = data.get("tool_output", data.get("output", ""))
