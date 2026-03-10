@@ -1,5 +1,5 @@
 description = "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices."
-prompt = """
+prompt = '''
 # PostgreSQL Patterns
 
 Quick reference for PostgreSQL best practices. For detailed guidance, use the `database-reviewer` agent.
@@ -141,4 +141,4 @@ SELECT pg_reload_conf();
 ---
 
 *Based on Supabase Agent Skills (credit: Supabase team) (MIT License)*
-"""
+'''

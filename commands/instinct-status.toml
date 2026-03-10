@@ -1,5 +1,5 @@
 description = "Show learned instincts (project + global) with confidence"
-prompt = """
+prompt = '''
 # Instinct Status Command
 
 Shows learned instincts for the current project plus global instincts, grouped by domain.
@@ -53,4 +53,4 @@ python3 ~/.gemini/skills/continuous-learning-v2/scripts/instinct-cli.py status
     █████████░  85%  validate-user-input [global]
               trigger: when handling user input
 ```
-"""
+'''

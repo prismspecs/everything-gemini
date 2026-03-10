@@ -1,5 +1,5 @@
 description = "Cache expensive file processing results using SHA-256 content hashes — path-independent, auto-invalidating, with service layer separation."
-prompt = """
+prompt = '''
 # Content-Hash File Cache Pattern
 
 Cache expensive file processing results (PDF parsing, text extraction, image analysis) using SHA-256 content hashes as cache keys. Unlike path-based caching, this approach survives file moves/renames and auto-invalidates when content changes.
@@ -155,4 +155,4 @@ data = dataclasses.asdict(entry)  # Use manual serialization instead
 - Data that must always be fresh (real-time feeds)
 - Cache entries that would be extremely large (consider streaming instead)
 - Results that depend on parameters beyond file content (e.g., different extraction configs)
-"""
+'''

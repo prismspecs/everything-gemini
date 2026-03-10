@@ -1,5 +1,5 @@
 description = "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing."
-prompt = """
+prompt = '''
 # Agentic Engineering
 
 Use this skill for engineering workflows where AI agents perform most implementation work and humans enforce quality and risk controls.
@@ -27,9 +27,8 @@ Apply the 15-minute unit rule:
 
 ## Model Routing
 
-- Haiku: classification, boilerplate transforms, narrow edits
-- Sonnet: implementation and refactors
-- Opus: architecture, root-cause analysis, multi-file invariants
+- Gemini 2.0 Flash: classification, boilerplate transforms, narrow edits, implementation and refactors
+- Gemini 2.0 Pro: architecture, root-cause analysis, multi-file invariants
 
 ## Session Strategy
 
@@ -57,4 +56,4 @@ Track per task:
 - success/failure
 
 Escalate model tier only when lower tier fails with a clear reasoning gap.
-"""
+'''

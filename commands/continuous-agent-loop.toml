@@ -1,5 +1,5 @@
 description = "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls."
-prompt = """
+prompt = '''
 # Continuous Agent Loop
 
 This is the v1.8+ canonical loop skill name. It supersedes `autonomous-loops` while keeping compatibility for one release.
@@ -39,4 +39,4 @@ Recommended production stack:
 - run `/harness-audit`
 - reduce scope to failing unit
 - replay with explicit acceptance criteria
-"""
+'''

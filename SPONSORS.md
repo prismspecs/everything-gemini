@@ -36,7 +36,7 @@ Use these proof points in sponsor conversations:
 - Live npm install/download metrics for `ecc-universal` and `ecc-agentshield`
 - GitHub App distribution via Marketplace installs
 - Public adoption signals: stars, forks, contributors, release cadence
-- Cross-harness support: Gemini Code, Cursor, OpenCode, Codex app/CLI
+- Dedicated Gemini CLI support: commands, rules, agents, and MCP server configurations
 
 See [`docs/business/metrics-and-sponsorship.md`](docs/business/metrics-and-sponsorship.md) for a copy/paste metrics pull workflow.
 

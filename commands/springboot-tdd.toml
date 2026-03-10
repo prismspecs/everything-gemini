@@ -1,5 +1,5 @@
 description = "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring."
-prompt = """
+prompt = '''
 # Spring Boot TDD Workflow
 
 TDD guidance for Spring Boot services with 80%+ coverage (unit + integration).
@@ -152,4 +152,4 @@ class MarketBuilder {
 - Gradle: `./gradlew test jacocoTestReport`
 
 **Remember**: Keep tests fast, isolated, and deterministic. Test behavior, not implementation details.
-"""
+'''

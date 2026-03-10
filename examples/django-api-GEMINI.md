@@ -9,6 +9,12 @@
 
 **Architecture:** Domain-driven design with apps per business domain. DRF for API layer, Celery for async tasks, pytest for testing. All endpoints return JSON — no template rendering.
 
+## Rule Imports
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+@~/.gemini/rules/python/coding-style.md
+@~/.gemini/rules/python/testing.md
+
 ## Critical Rules
 
 ### Python Conventions

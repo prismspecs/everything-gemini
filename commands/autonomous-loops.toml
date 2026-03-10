@@ -1,5 +1,5 @@
 description = "Patterns and architectures for autonomous Gemini Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems."
-prompt = """
+prompt = '''
 # Autonomous Loops Skill
 
 > Compatibility note (v1.8.0): `autonomous-loops` is retained for one release.
@@ -73,14 +73,14 @@ gemini -p "Create a conventional commit for all staged changes. Use 'feat: add O
 
 **With model routing:**
 ```bash
-# Research with Opus (deep reasoning)
-gemini -p --model opus "Analyze the codebase architecture and write a plan for adding caching..."
+# Research with Gemini 2.0 Pro (deep reasoning)
+gemini -p --model gemini-3-pro "Analyze the codebase architecture and write a plan for adding caching..."
 
-# Implement with Sonnet (fast, capable)
+# Implement with Gemini 2.0 Flash (fast, capable)
 gemini -p "Implement the caching layer according to the plan in docs/caching-plan.md..."
 
-# Review with Opus (thorough)
-gemini -p --model opus "Review all changes for security issues, race conditions, and edge cases..."
+# Review with Gemini 2.0 Pro (thorough)
+gemini -p --model gemini-3-pro "Review all changes for security issues, race conditions, and edge cases..."
 ```
 
 **With environment context:**
@@ -455,14 +455,14 @@ Each stage runs in its own agent process with its own context window:
 
 | Stage | Model | Purpose |
 |-------|-------|---------|
-| Research | Sonnet | Read codebase + RFC, produce context doc |
-| Plan | Opus | Design implementation steps |
+| Research | Gemini 2.0 Flash | Read codebase + RFC, produce context doc |
+| Plan | Gemini 2.0 Pro | Design implementation steps |
 | Implement | Codex | Write code following the plan |
-| Test | Sonnet | Run build + test suite |
-| PRD Review | Sonnet | Spec compliance check |
-| Code Review | Opus | Quality + security check |
+| Test | Gemini 2.0 Flash | Run build + test suite |
+| PRD Review | Gemini 2.0 Flash | Spec compliance check |
+| Code Review | Gemini 2.0 Pro | Quality + security check |
 | Review Fix | Codex | Address review issues |
-| Final Review | Opus | Quality gate (large tier only) |
+| Final Review | Gemini 2.0 Pro | Quality gate (large tier only) |
 
 **Critical design:** The reviewer never wrote the code it reviews. This eliminates author bias — the most common source of missed issues in self-review.
 
@@ -568,13 +568,13 @@ These patterns compose well:
 
 3. **Any loop + Verification** — Use ECC's `/verify` command or `verification-loop` skill as a gate before commits.
 
-4. **Ralphinho's tiered approach in simpler loops** — Even in a sequential pipeline, you can route simple tasks to Haiku and complex tasks to Opus:
+4. **Ralphinho's tiered approach in simpler loops** — Even in a sequential pipeline, you can route simple tasks to Gemini 2.0 Flash and complex tasks to Gemini 2.0 Pro:
    ```bash
    # Simple formatting fix
-   gemini -p --model haiku "Fix the import ordering in src/utils.ts"
+   gemini -p --model gemini-3-flash "Fix the import ordering in src/utils.ts"
 
    # Complex architectural change
-   gemini -p --model opus "Refactor the auth module to use the strategy pattern"
+   gemini -p --model gemini-3-pro "Refactor the auth module to use the strategy pattern"
    ```
 
 ---
@@ -606,4 +606,4 @@ These patterns compose well:
 | Continuous Gemini | AnandChowdhary | credit: @AnandChowdhary |
 | NanoClaw | ECC | `/claw` command in this repo |
 | Verification Loop | ECC | `skills/verification-loop/` in this repo |
-"""
+'''

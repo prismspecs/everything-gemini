@@ -14,11 +14,10 @@ Add to your `~/.gemini/settings.json`:
 
 ```json
 {
-  "model": "sonnet",
+  "model": "gemini-3-flash",
   "env": {
-    "MAX_THINKING_TOKENS": "10000",
-    "GEMINI_AUTOCOMPACT_PCT_OVERRIDE": "50",
-    "GEMINI_CODE_SUBAGENT_MODEL": "haiku"
+    "GEMINI_AUTOCOMPACT_PCT_OVERRIDE": "70",
+    "GEMINI_CODE_SUBAGENT_MODEL": "gemini-3-flash"
   }
 }
 ```
@@ -27,10 +26,9 @@ Add to your `~/.gemini/settings.json`:
 
 | Setting | Default | Recommended | Effect |
 |---------|---------|-------------|--------|
-| `model` | opus | **sonnet** | Sonnet handles ~80% of coding tasks well. Switch to Opus with `/model opus` for complex reasoning. ~60% cost reduction. |
-| `MAX_THINKING_TOKENS` | 31,999 | **10,000** | Extended thinking reserves up to 31,999 output tokens per request for internal reasoning. Reducing this cuts hidden cost by ~70%. Set to `0` to disable for trivial tasks. |
-| `GEMINI_AUTOCOMPACT_PCT_OVERRIDE` | 95 | **50** | Auto-compaction triggers when context reaches this % of capacity. Default 95% is too late — quality degrades before that. Compacting at 50% keeps sessions healthier. |
-| `GEMINI_CODE_SUBAGENT_MODEL` | _(inherits main)_ | **haiku** | Subagents (Task tool) run on this model. Haiku is ~80% cheaper and sufficient for exploration, file reading, and test running. |
+| `model` | gemini-3-flash | **gemini-3-flash** | Flash is extremely fast and capable for most coding tasks. Use Pro for complex reasoning. |
+| `GEMINI_AUTOCOMPACT_PCT_OVERRIDE` | 95 | **70** | Auto-compaction triggers when context reaches this % of capacity. 70% keeps sessions responsive. |
+| `GEMINI_CODE_SUBAGENT_MODEL` | _(inherits main)_ | **gemini-3-flash** | Subagents run on this model. Flash is cost-effective and sufficient for exploration. |
 
 ### Toggling extended thinking
 
@@ -45,16 +43,15 @@ Use the right model for the task:
 
 | Model | Best for | Cost |
 |-------|----------|------|
-| **Haiku** | Subagent exploration, file reading, simple lookups | Lowest |
-| **Sonnet** | Day-to-day coding, reviews, test writing, implementation | Medium |
-| **Opus** | Complex architecture, multi-step reasoning, debugging subtle issues | Highest |
+| **gemini-3-flash** | Day-to-day coding, exploration, file reading, simple lookups | Lowest |
+| **gemini-3-pro** | Complex architecture, multi-step reasoning, debugging subtle issues | Medium |
+| **gemini-1.5-pro** | Large context tasks requiring deep reasoning | Medium |
 
 Switch models mid-session:
 
 ```
-/model sonnet     # default for most work
-/model opus       # complex reasoning
-/model haiku      # quick lookups
+/model gemini-3-flash     # default for most work
+/model gemini-3-pro       # complex reasoning
 ```
 
 ---
@@ -122,15 +119,13 @@ The `configure-ecc` install wizard could offer to set these environment variable
 
 ```bash
 # Daily workflow
-/model sonnet              # Start here
-/model opus                # Only for complex reasoning
+/model gemini-3-flash    # Start here
+/model gemini-3-pro      # Only for complex reasoning
 /clear                     # Between unrelated tasks
 /compact                   # At logical breakpoints
 /cost                      # Check spending
 
 # Environment variables (add to ~/.gemini/settings.json "env" block)
-MAX_THINKING_TOKENS=10000
-GEMINI_AUTOCOMPACT_PCT_OVERRIDE=50
-GEMINI_CODE_SUBAGENT_MODEL=haiku
-GEMINI_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+GEMINI_AUTOCOMPACT_PCT_OVERRIDE=70
+GEMINI_CODE_SUBAGENT_MODEL=gemini-3-flash
 ```

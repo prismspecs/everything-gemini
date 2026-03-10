@@ -1,5 +1,5 @@
 description = "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration."
-prompt = """
+prompt = '''
 # Docker Patterns
 
 Docker and Docker Compose best practices for containerized development.
@@ -358,4 +358,4 @@ docker network inspect <project>_default
 # BAD: Putting secrets in docker-compose.yml
 # Use .env files (gitignored) or Docker secrets
 ```
-"""
+'''

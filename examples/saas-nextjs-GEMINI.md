@@ -9,6 +9,12 @@
 
 **Architecture:** Server Components by default. Client Components only for interactivity. API routes for webhooks and server actions for mutations.
 
+## Rule Imports
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+@~/.gemini/rules/typescript/coding-style.md
+@~/.gemini/rules/typescript/testing.md
+
 ## Critical Rules
 
 ### Database

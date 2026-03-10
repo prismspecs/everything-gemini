@@ -1,5 +1,5 @@
 description = "Start NanoClaw v2 — ECC's persistent, zero-dependency REPL with model routing, skill hot-load, branching, compaction, export, and metrics."
-prompt = """
+prompt = '''
 # Claw Command
 
 Start an interactive AI agent session with persistent markdown history and operational controls.
@@ -22,7 +22,7 @@ npm run claw
 |----------|---------|-------------|
 | `CLAW_SESSION` | `default` | Session name (alphanumeric + hyphens) |
 | `CLAW_SKILLS` | *(empty)* | Comma-separated skills loaded at startup |
-| `CLAW_MODEL` | `sonnet` | Default model for the session |
+| `CLAW_MODEL` | `gemini-3-flash` | Default model for the session |
 
 ## REPL Commands
 
@@ -47,4 +47,4 @@ exit                           Quit
 - Sessions are stored at `~/.gemini/claw/<session>.md`.
 - Compaction keeps the most recent turns and writes a compaction header.
 - Export supports markdown, JSON turns, and plain text.
-"""
+'''

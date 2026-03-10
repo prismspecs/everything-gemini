@@ -152,7 +152,7 @@ agents/your-agent-name.md
 name: your-agent-name
 description: What this agent does and when Gemini should invoke it. Be specific!
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: gemini-3-flash
 ---
 
 You are a [role] specialist.
@@ -193,7 +193,7 @@ Output: [what you return]
 | `name` | Lowercase, hyphenated | `code-reviewer` |
 | `description` | Used to decide when to invoke | Be specific! |
 | `tools` | Only what's needed | `Read, Write, Edit, Bash, Grep, Glob, WebFetch, Task` |
-| `model` | Complexity level | `haiku` (simple), `sonnet` (coding), `opus` (complex) |
+| `model` | Complexity level | `flash` (simple), `pro` (coding/complex) |
 
 ### Example Agents
 

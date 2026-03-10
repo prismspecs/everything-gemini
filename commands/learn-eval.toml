@@ -1,5 +1,5 @@
 description = "Extract reusable patterns from the session, self-evaluate quality before saving, and determine the right save location (Global vs Project)."
-prompt = """
+prompt = '''
 # /learn-eval - Extract, Evaluate, then Save
 
 Extends `/learn` with a quality gate and save-location decision before writing any skill file.
@@ -87,4 +87,4 @@ origin: auto-extracted
 - Focus on patterns that will save time in future sessions
 - Keep skills focused — one pattern per skill
 - If Coverage score is low, add related variants before saving
-"""
+'''

@@ -1,5 +1,5 @@
 description = "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs."
-prompt = """
+prompt = '''
 # Django Testing with TDD
 
 Test-driven development for Django applications using pytest, factory_boy, and Django REST Framework.
@@ -723,4 +723,4 @@ open htmlcov/index.html
 | `mail.outbox` | Check sent emails |
 
 Remember: Tests are documentation. Good tests explain how your code should work. Keep them simple, readable, and maintainable.
-"""
+'''

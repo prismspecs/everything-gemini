@@ -1,5 +1,5 @@
 description = "Scan your Gemini Code configuration (.gemini/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks GEMINI.md, settings.json, MCP servers, hooks, and agent definitions."
-prompt = """
+prompt = '''
 # Security Scan Skill
 
 Audit your Gemini Code configuration for security issues using [AgentShield](https://github.com/affaan-m/agentshield).
@@ -83,14 +83,14 @@ This will:
 - Tighten wildcard permissions to scoped alternatives
 - Never modify manual-only suggestions
 
-### Opus 4.6 Deep Analysis
+### Gemini 2.0 Pro Deep Analysis
 
 Run the adversarial three-agent pipeline for deeper analysis:
 
 ```bash
-# Requires ANTHROPIC_API_KEY
-export ANTHROPIC_API_KEY=your-key
-npx ecc-agentshield scan --opus --stream
+# Requires GEMINI_API_KEY
+export GEMINI_API_KEY=your-key
+npx ecc-agentshield scan --pro --stream
 ```
 
 This runs:
@@ -159,4 +159,4 @@ Add to your CI pipeline:
 
 - **GitHub**: [github.com/affaan-m/agentshield](https://github.com/affaan-m/agentshield)
 - **npm**: [npmjs.com/package/ecc-agentshield](https://www.npmjs.com/package/ecc-agentshield)
-"""
+'''

@@ -1,5 +1,5 @@
 description = "Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics, and project layout."
-prompt = """
+prompt = '''
 # Java Coding Standards
 
 Standards for readable, maintainable Java (17+) code in Spring Boot services.
@@ -141,4 +141,4 @@ log.error("failed_fetch_market slug={}", slug, ex);
 - Favor deterministic tests; no hidden sleeps
 
 **Remember**: Keep code intentional, typed, and observable. Optimize for maintainability over micro-optimizations unless proven necessary.
-"""
+'''

@@ -1,5 +1,5 @@
 description = "Interactive installer for Everything Gemini Code — guides users through selecting and installing skills and rules to user-level or project-level directories, verifies paths, and optionally optimizes installed files."
-prompt = """
+prompt = '''
 # Configure Everything Gemini Code (ECC)
 
 An interactive, step-by-step installation wizard for the Everything Gemini Code project. Uses `AskUserQuestion` to guide users through selective installation of skills and rules, then verifies correctness and offers optimization.
@@ -62,13 +62,13 @@ mkdir -p $TARGET/skills $TARGET/rules
 
 ### 2a: Choose Scope (Core vs Niche)
 
-Default to **Core (recommended for new users)** — copy `.agents/skills/*` plus `skills/search-first/` for research-first workflows. This bundle covers engineering, evals, verification, security, strategic compaction, frontend design, and Anthropic cross-functional skills (article-writing, content-engine, market-research, frontend-slides).
+Default to **Core (recommended for new users)** — copy `.agents/skills/*` plus `skills/search-first/` for research-first workflows. This bundle covers engineering, evals, verification, security, strategic compaction, frontend design, and Gemini cross-functional skills (article-writing, content-engine, market-research, frontend-slides).
 
 Use `AskUserQuestion` (single select):
 ```
 Question: "Install core skills only, or include niche/framework packs?"
 Options:
-  - "Core only (recommended)" — "tdd, e2e, evals, verification, research-first, security, frontend patterns, compacting, cross-functional Anthropic skills"
+  - "Core only (recommended)" — "tdd, e2e, evals, verification, research-first, security, frontend patterns, compacting, cross-functional Gemini skills"
   - "Core + selected niche" — "Add framework/domain-specific skills after core"
   - "Niche only" — "Skip core, install specific framework/domain skills"
 Default: Core only
@@ -320,4 +320,4 @@ Then print a summary report:
 ### "Path reference errors after project-level install"
 - Some skills assume `~/.gemini/` paths. Run Step 4 verification to find and fix these.
 - For `continuous-learning-v2`, the `~/.gemini/homunculus/` directory is always user-level — this is expected and not an error.
-"""
+'''

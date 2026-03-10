@@ -1,5 +1,5 @@
 description = "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps."
-prompt = """
+prompt = '''
 # Django Development Patterns
 
 Production-grade Django architecture patterns for scalable, maintainable applications.
@@ -728,4 +728,4 @@ Product.objects.filter(stock=0).delete()
 | Middleware | Request/response processing |
 
 Remember: Django provides many shortcuts, but for production applications, structure and organization matter more than concise code. Build for maintainability.
-"""
+'''

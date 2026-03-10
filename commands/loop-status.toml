@@ -1,5 +1,5 @@
 description = "No description provided."
-prompt = """
+prompt = '''
 # Loop Status Command
 
 Inspect active loop state, progress, and failure signals.
@@ -24,4 +24,4 @@ When `--watch` is present, refresh status periodically and surface state changes
 
 $ARGUMENTS:
 - `--watch` optional
-"""
+'''

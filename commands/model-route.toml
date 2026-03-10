@@ -1,5 +1,5 @@
 description = "No description provided."
-prompt = """
+prompt = '''
 # Model Route Command
 
 Recommend the best model tier for the current task by complexity and budget.
@@ -10,9 +10,8 @@ Recommend the best model tier for the current task by complexity and budget.
 
 ## Routing Heuristic
 
-- `haiku`: deterministic, low-risk mechanical changes
-- `sonnet`: default for implementation and refactors
-- `opus`: architecture, deep review, ambiguous requirements
+- `gemini-3-flash`: deterministic, low-risk mechanical changes, implementation and refactors
+- `gemini-3-pro`: architecture, deep review, ambiguous requirements
 
 ## Required Output
 
@@ -26,4 +25,4 @@ Recommend the best model tier for the current task by complexity and budget.
 $ARGUMENTS:
 - `[task-description]` optional free-text
 - `--budget low|med|high` optional
-"""
+'''

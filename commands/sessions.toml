@@ -1,5 +1,5 @@
 description = "No description provided."
-prompt = """
+prompt = '''
 # Sessions Command
 
 Manage Gemini Code session history - list, load, alias, and edit sessions stored in `~/.gemini/sessions/`.
@@ -305,4 +305,4 @@ $ARGUMENTS:
 - Aliases are stored in `~/.gemini/session-aliases.json`
 - Session IDs can be shortened (first 4-8 characters usually unique enough)
 - Use aliases for frequently referenced sessions
-"""
+'''

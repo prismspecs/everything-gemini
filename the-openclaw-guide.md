@@ -118,7 +118,7 @@ You already know how to:
 - SSH into a server from your phone (Termius, Blink, Prompt — or just mosh into your server and it can operate the same)
 - Run Gemini Code in a tmux session that persists through disconnects
 - Set up cron jobs via `crontab` or cron-job.org
-- Use the AI harnesses directly — Gemini Code, Cursor, Codex — without an orchestration wrapper
+- Use the Gemini CLI directly — without an orchestration wrapper
 - Write your own automation with skills, hooks, and commands
 - Configure browser automation through Playwright or proper APIs
 
@@ -401,7 +401,7 @@ If you're currently running OpenClaw or considering it, here's the practical tak
 
 ### If you're considering OpenClaw:
 
-Ask yourself honestly: do you need multi-channel orchestration, or do you need an AI agent that can execute tasks? Those are different things. The agent functionality is available through Gemini Code, Cursor, Codex, and other harnesses — without the multi-channel attack surface.
+Ask yourself honestly: do you need multi-channel orchestration, or do you need an AI agent that can execute tasks? Those are different things. The agent functionality is available through Gemini CLI — without the multi-channel attack surface.
 
 If you decide the multi-channel orchestration is genuinely necessary for your workflow, go in with your eyes open. Know what you're connecting. Know what a compromised channel means. Read every skill before you install it. Run it on a dedicated machine, not your personal laptop.
 

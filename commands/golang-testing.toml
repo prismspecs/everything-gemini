@@ -1,5 +1,5 @@
 description = "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices."
-prompt = """
+prompt = '''
 # Go Testing Patterns
 
 Comprehensive Go testing patterns for writing reliable, maintainable tests following TDD methodology.
@@ -714,4 +714,4 @@ test:
 ```
 
 **Remember**: Tests are documentation. They show how your code is meant to be used. Write them clearly and keep them up to date.
-"""
+'''

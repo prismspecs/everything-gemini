@@ -1,0 +1,47 @@
+description = "Standardized git workflow: verify build, audit for secrets, stage files, and generate a conventional commit message."
+prompt = '''
+# Commit Command
+
+Automate the standardized git workflow to ensure high-quality, secure, and verifiable commits.
+
+## Workflow
+
+Follow these steps in order. If any step fails, STOP and report the error to the user before proceeding.
+
+### Step 1: Verification (Safety Gate)
+Run the `/verify quick` command to ensure the current state builds and passes basic type checks. 
+- If the build is broken, do NOT commit. Report the failure.
+
+### Step 2: Security & Quality Audit
+Run the `/code-review` command to scan for:
+- Hardcoded secrets (API keys, tokens)
+- `console.log` statements or debuggers
+- Large architectural violations
+
+If any **CRITICAL** or **HIGH** issues are found (especially secrets), stop and ask the user to fix them first.
+
+### Step 3: Stage Changes
+Run `git status` to see what is changed.
+Run `git add .` (or specific files if the user provided arguments) to stage the changes.
+
+### Step 4: Generate Commit Message
+Analyze the staged changes using `git diff --staged`. 
+Generate a **Conventional Commit** message following the project's rules:
+- Format: `<type>: <description>`
+- Types: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
+- Focus on the "why" and "what," not the "how."
+
+### Step 5: Execute Commit
+Run `git commit -m "<generated_message>"`.
+
+### Step 6: Post-Commit Options
+Confirm the commit was successful (`git status`).
+Ask the user: "Commit successful. Would you like to **push** to the remote branch or **create a PR** summary?"
+
+## Arguments
+
+$ARGUMENTS:
+- `[files]` - Optional: Specific files to stage (defaults to all changed files via `git add .`)
+- `--no-verify` - Skip the verification step (not recommended)
+- `--amend` - Amend the last commit instead of creating a new one
+'''

@@ -1,5 +1,5 @@
 description = "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads."
-prompt = """
+prompt = '''
 # ClickHouse Analytics Patterns
 
 ClickHouse-specific patterns for high-performance analytics and data engineering.
@@ -433,4 +433,4 @@ pgClient.on('notification', async (msg) => {
 - Review slow query log
 
 **Remember**: ClickHouse excels at analytical workloads. Design tables for your query patterns, batch inserts, and leverage materialized views for real-time aggregations.
-"""
+'''

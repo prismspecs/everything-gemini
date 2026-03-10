@@ -8,7 +8,7 @@
 
 When thousands of developers fork your configuration and run it with full system access, you start thinking differently about what goes into those files. I audited community contributions, reviewed pull requests from strangers, and traced what happens when an LLM reads instructions it was never meant to trust. What I found was bad enough to build an entire tool around it.
 
-That tool is AgentShield — 102 security rules, 1280 tests across 5 categories, built specifically because the existing tooling for auditing agent configurations didn't exist. This guide covers what I learned building it, and how to apply it whether you're running Gemini Code, Cursor, Codex, OpenClaw, or any custom agent build.
+That tool is AgentShield — 102 security rules, 1280 tests across 5 categories, built specifically because the existing tooling for auditing agent configurations didn't exist. This guide covers what I learned building it, and how to apply it whether you're running Gemini CLI or any custom agent build.
 
 This is not theoretical. The incidents referenced here are real. The attack vectors are active. And if you're running an AI agent with access to your filesystem, your credentials, and your services — this is the guide that tells you what to do about it.
 
@@ -359,7 +359,7 @@ CVE-2026-25253 (CVSS 8.8) documented exactly this class of lateral movement in a
 
 This one is particularly insidious. An MCP tool registers with a clean description: "Search documentation." You approve it. Later, the tool definition is dynamically amended — the description now contains hidden instructions that override your agent's behavior. This is called a **rug pull**: you approved a tool, but the tool changed since your approval.
 
-Researchers demonstrated that poisoned MCP tools can exfiltrate `mcp.json` configuration files and SSH keys from users of Cursor and Gemini Code. The tool description is invisible to you in the UI but fully visible to the model. It's an attack vector that bypasses every permission prompt because you already said yes.
+Researchers demonstrated that poisoned MCP tools can exfiltrate `mcp.json` configuration files and SSH keys from users of Gemini CLI. The tool description is invisible to you in the UI but fully visible to the model. It's an attack vector that bypasses every permission prompt because you already said yes.
 
 Mitigation: pin MCP tool versions, verify tool descriptions haven't changed between sessions, and run `npx ecc-agentshield scan` to detect suspicious MCP configurations.
 

@@ -1,5 +1,5 @@
 description = "Use when auditing Gemini skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation."
-prompt = """
+prompt = '''
 # skill-stocktake
 
 Slash command (`/skill-stocktake`) that audits all Gemini skills and commands using a quality checklist + AI holistic judgment. Supports two modes: Quick Scan for recently changed skills, and Full Stocktake for a complete review.
@@ -71,7 +71,7 @@ Scanning:
 
 ### Phase 2 — Quality Evaluation
 
-Launch a Task tool subagent (**Explore agent, model: opus**) with the full inventory and checklist.
+Launch a Task tool subagent (**Explore agent, model: gemini-3-pro**) with the full inventory and checklist.
 The subagent reads each skill, applies the checklist, and returns per-skill JSON:
 
 `{ "verdict": "Keep"|"Improve"|"Update"|"Retire"|"Merge into [X]", "reason": "..." }`
@@ -171,4 +171,4 @@ Obtain via Bash: `date -u +%Y-%m-%dT%H:%M:%SZ`. Never use a date-only approximat
 - Evaluation is blind: the same checklist applies to all skills regardless of origin (ECC, self-authored, auto-extracted)
 - Archive / delete operations always require explicit user confirmation
 - No verdict branching by skill origin
-"""
+'''

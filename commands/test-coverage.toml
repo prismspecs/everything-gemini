@@ -1,5 +1,5 @@
 description = "No description provided."
-prompt = """
+prompt = '''
 # Test Coverage
 
 Analyze test coverage, identify gaps, and generate missing tests to reach 80%+ coverage.
@@ -69,4 +69,4 @@ Overall:               67%     84%  ✅
 - Utility functions used across the codebase
 - API endpoint handlers (request → response flow)
 - Edge cases: null, undefined, empty string, empty array, zero, negative numbers
-"""
+'''

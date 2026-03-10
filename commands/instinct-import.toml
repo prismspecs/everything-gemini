@@ -1,5 +1,5 @@
 description = "Import instincts from file or URL into project/global scope"
-prompt = """
+prompt = '''
 # Instinct Import Command
 
 ## Implementation
@@ -108,4 +108,4 @@ New instincts saved to: ~/.gemini/homunculus/instincts/inherited/
 
 Run /instinct-status to see all instincts.
 ```
-"""
+'''

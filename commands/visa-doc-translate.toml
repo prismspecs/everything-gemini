@@ -1,5 +1,5 @@
 description = "Translate visa application documents (images) to English and create a bilingual PDF with original and translation"
-prompt = """
+prompt = '''
 You are helping translate visa application documents for visa applications.
 
 ## Instructions
@@ -112,4 +112,4 @@ The skill will:
    - Page 2: Professional English translation
 
 Perfect for visa applications to Australia, USA, Canada, UK, and other countries requiring translated documents.
-"""
+'''

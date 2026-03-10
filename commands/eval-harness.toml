@@ -1,5 +1,5 @@
 description = "Formal evaluation framework for Gemini Code sessions implementing eval-driven development (EDD) principles"
-prompt = """
+prompt = '''
 # Eval Harness Skill
 
 A formal evaluation framework for Gemini Code sessions, implementing eval-driven development (EDD) principles.
@@ -263,4 +263,4 @@ Recommended thresholds:
 - `.gemini/evals/<feature>.md` definition
 - `.gemini/evals/<feature>.log` run history
 - `docs/releases/<version>/eval-summary.md` release snapshot
-"""
+'''

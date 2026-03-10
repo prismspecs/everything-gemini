@@ -1,5 +1,5 @@
 description = "Pattern for progressively refining context retrieval to solve the subagent context problem"
-prompt = """
+prompt = '''
 # Iterative Retrieval Pattern
 
 Solves the "context problem" in multi-agent workflows where subagents don't know what context they need until they start working.
@@ -205,4 +205,4 @@ When retrieving context for this task:
 - [The Longform Guide](https://x.com/affaanmustafa/status/2014040193557471352) - Subagent orchestration section
 - `continuous-learning` skill - For patterns that improve over time
 - Agent definitions bundled with ECC (manual install path: `agents/`)
-"""
+'''

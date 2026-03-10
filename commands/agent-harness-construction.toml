@@ -1,5 +1,5 @@
 description = "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates."
-prompt = """
+prompt = '''
 # Agent Harness Construction
 
 Use this skill when you are improving how an agent plans, calls tools, recovers from errors, and converges on completion.
@@ -67,4 +67,4 @@ Track:
 - Opaque tool output with no recovery hints.
 - Error-only output without next steps.
 - Context overloading with irrelevant references.
-"""
+'''

@@ -1,5 +1,5 @@
 description = "Restate requirements, assess risks, and create step-by-step implementation plan. WAIT for user CONFIRM before touching any code."
-prompt = """
+prompt = '''
 # Plan Command
 
 This command invokes the **planner** agent to create a comprehensive implementation plan before writing any code.
@@ -111,4 +111,4 @@ This command invokes the `planner` agent provided by ECC.
 
 For manual installs, the source file lives at:
 `agents/planner.md`
-"""
+'''

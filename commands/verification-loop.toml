@@ -1,5 +1,5 @@
 description = "A comprehensive verification system for Gemini Code sessions."
-prompt = """
+prompt = '''
 # Verification Loop Skill
 
 A comprehensive verification system for Gemini Code sessions.
@@ -120,4 +120,4 @@ Run: /verify
 
 This skill complements PostToolUse hooks but provides deeper verification.
 Hooks catch issues immediately; this skill provides comprehensive review.
-"""
+'''

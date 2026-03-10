@@ -1,5 +1,5 @@
 description = "Write-time code quality enforcement using Plankton — auto-formatting, linting, and Gemini-powered fixes on every file edit via hooks."
-prompt = """
+prompt = '''
 # Plankton Code Quality Skill
 
 Integration reference for Plankton (credit: @alxfazio), a write-time code quality enforcement system for Gemini Code. Plankton runs formatters and linters on every file edit via PostToolUse hooks, then spawns Gemini subprocesses to fix violations the agent didn't catch.
@@ -8,7 +8,7 @@ Integration reference for Plankton (credit: @alxfazio), a write-time code qualit
 
 - You want automatic formatting and linting on every file edit (not just at commit time)
 - You need defense against agents modifying linter configs to pass instead of fixing code
-- You want tiered model routing for fixes (Haiku for simple style, Sonnet for logic, Opus for types)
+- You want tiered model routing for fixes (gemini-3-flash for simple style, gemini-3-flash for logic, gemini-3-pro for types)
 - You work with multiple languages (Python, TypeScript, Shell, YAML, JSON, TOML, Markdown, Dockerfile)
 
 ## How It Works
@@ -31,9 +31,9 @@ Phase 2: Collect Violations (JSON)
 Phase 3: Delegate + Verify
 ├─ Spawns gemini -p subprocess with violations JSON
 ├─ Routes to model tier based on violation complexity:
-│   ├─ Haiku: formatting, imports, style (E/W/F codes) — 120s timeout
-│   ├─ Sonnet: complexity, refactoring (C901, PLR codes) — 300s timeout
-│   └─ Opus: type system, deep reasoning (unresolved-attribute) — 600s timeout
+│   ├─ gemini-3-flash: formatting, imports, style (E/W/F codes) — 120s timeout
+│   ├─ gemini-3-flash: complexity, refactoring (C901, PLR codes) — 300s timeout
+│   └─ gemini-3-pro: type system, deep reasoning (unresolved-attribute) — 600s timeout
 ├─ Re-runs Phase 1+2 to verify fixes
 └─ Exit 0 if clean, Exit 2 if violations remain (reported to main agent)
 ```
@@ -119,7 +119,7 @@ To use Plankton hooks in your own project:
 | Config protection | — | PreToolUse blocks + Stop hook detection |
 | Package manager | Detection + setup | Enforcement (blocks legacy PMs) |
 | CI integration | — | Pre-commit hooks for git |
-| Model routing | Manual (`/model opus`) | Automatic (violation complexity → tier) |
+| Model routing | Manual (`/model gemini-3-pro`) | Automatic (violation complexity → tier) |
 
 ### Recommended Combination
 
@@ -162,9 +162,9 @@ Plankton's `.gemini/hooks/config.json` controls all behavior:
   },
   "subprocess": {
     "tiers": {
-      "haiku":  { "timeout": 120, "max_turns": 10 },
-      "sonnet": { "timeout": 300, "max_turns": 10 },
-      "opus":   { "timeout": 600, "max_turns": 15 }
+      "gemini-3-flash":  { "timeout": 120, "max_turns": 10 },
+      "gemini-3-flash": { "timeout": 300, "max_turns": 10 },
+      "gemini-3-pro":   { "timeout": 600, "max_turns": 15 }
     },
     "volume_threshold": 5
   }
@@ -233,4 +233,4 @@ Track:
 - average remediation time
 - repeat violations by category
 - merge blocks due to gate failures
-"""
+'''

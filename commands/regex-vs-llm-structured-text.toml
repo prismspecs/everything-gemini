@@ -1,5 +1,5 @@
 description = "Decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases."
-prompt = """
+prompt = '''
 # Regex vs LLM for Structured Text Parsing
 
 A practical decision framework for parsing structured text (quizzes, forms, invoices, documents). The key insight: regex handles 95-98% of cases cheaply and deterministically. Reserve expensive LLM calls for the remaining edge cases.
@@ -130,18 +130,14 @@ def validate_with_llm(
     client,
 ) -> ParsedItem:
     """Use LLM to fix low-confidence extractions."""
-    response = client.messages.create(
-        model="gemini-haiku-4-5-20251001",  # Cheapest model for validation
-        max_tokens=500,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Extract the question, choices, and answer from this text.\n\n"
-                f"Text: {original_text}\n\n"
-                f"Current extraction: {item}\n\n"
-                f"Return corrected JSON if needed, or 'CORRECT' if accurate."
-            ),
-        }],
+    response = client.generate_content(
+        model="gemini-3-flash",  # Cheapest model for validation
+        contents=[(
+            f"Extract the question, choices, and answer from this text.\n\n"
+            f"Text: {original_text}\n\n"
+            f"Current extraction: {item}\n\n"
+            f"Return corrected JSON if needed, or 'CORRECT' if accurate."
+        )],
     )
     # Parse LLM response and return corrected item...
     return corrected_item
@@ -194,7 +190,7 @@ From a production quiz parsing pipeline (410 items):
 
 - **Start with regex** — even imperfect regex gives you a baseline to improve
 - **Use confidence scoring** to programmatically identify what needs LLM help
-- **Use the cheapest LLM** for validation (Haiku-class models are sufficient)
+- **Use the cheapest LLM** for validation (Gemini 2.0 Flash is sufficient)
 - **Never mutate** parsed items — return new instances from cleaning/validation steps
 - **TDD works well** for parsers — write tests for known patterns first, then edge cases
 - **Log metrics** (regex success rate, LLM call count) to track pipeline health
@@ -214,4 +210,4 @@ From a production quiz parsing pipeline (410 items):
 - Invoice/receipt processing
 - Document structure parsing (headers, sections, tables)
 - Any structured text with repeating patterns where cost matters
-"""
+'''

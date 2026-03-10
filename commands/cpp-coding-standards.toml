@@ -1,5 +1,5 @@
 description = "C++ coding standards based on the C++ Core Guidelines (isocpp.github.io). Use when writing, reviewing, or refactoring C++ code to enforce modern, safe, and idiomatic practices."
-prompt = """
+prompt = '''
 # C++ Coding Standards (C++ Core Guidelines)
 
 Comprehensive coding standards for modern C++ (C++17/20/23) derived from the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines). Enforces type safety, resource safety, immutability, and clarity.
@@ -717,4 +717,4 @@ Before marking C++ work complete:
 - [ ] Exceptions are custom types, thrown by value, caught by reference (E.14, E.15)
 - [ ] `'\n'` instead of `std::endl` (SL.io.50)
 - [ ] No magic numbers (ES.45)
-"""
+'''

@@ -1,5 +1,5 @@
 description = "Promote project-scoped instincts to global scope"
-prompt = """
+prompt = '''
 # Promote Command
 
 Promote instincts from project scope to global scope in continuous-learning-v2.
@@ -35,4 +35,4 @@ python3 ~/.gemini/skills/continuous-learning-v2/scripts/instinct-cli.py promote 
    - Appear in at least 2 projects
    - Meet confidence threshold
 4. Write promoted instincts to `~/.gemini/homunculus/instincts/personal/` with `scope: global`
-"""
+'''

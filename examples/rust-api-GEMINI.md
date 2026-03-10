@@ -9,6 +9,11 @@
 
 **Architecture:** Layered architecture with handler → service → repository separation. Axum for HTTP, SQLx for type-checked SQL at compile time, Tower middleware for cross-cutting concerns.
 
+## Rule Imports
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+@~/.gemini/rules/common/testing.md
+
 ## Critical Rules
 
 ### Rust Conventions

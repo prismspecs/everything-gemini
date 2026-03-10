@@ -9,6 +9,12 @@
 
 **Architecture:** Clean architecture with domain, repository, service, and handler layers. gRPC as primary transport with REST gateway for external clients.
 
+## Rule Imports
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+@~/.gemini/rules/golang/coding-style.md
+@~/.gemini/rules/golang/testing.md
+
 ## Critical Rules
 
 ### Go Conventions

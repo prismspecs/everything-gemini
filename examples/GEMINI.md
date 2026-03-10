@@ -2,6 +2,15 @@
 
 This is an example project-level GEMINI.md file. Place this in your project root.
 
+## Global Rules
+@~/.gemini/rules/common/security.md
+@~/.gemini/rules/common/coding-style.md
+@~/.gemini/rules/common/testing.md
+
+## Language Specific Rules
+@~/.gemini/rules/typescript/coding-style.md
+@~/.gemini/rules/typescript/testing.md
+
 ## Project Overview
 
 [Brief description of your project - what it does, tech stack]

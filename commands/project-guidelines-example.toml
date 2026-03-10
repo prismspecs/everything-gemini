@@ -1,5 +1,5 @@
 description = "Example project-specific skill template based on a real production application."
-prompt = """
+prompt = '''
 # Project Guidelines Skill (Example)
 
 This is an example of a project-specific skill. Use this as a template for your own projects.
@@ -147,8 +147,9 @@ async function fetchApi<T>(
 ### Gemini AI Integration (Structured Output)
 
 ```python
-from anthropic import Anthropic
+import google.generativeai as genai
 from pydantic import BaseModel
+import os
 
 class AnalysisResult(BaseModel):
     summary: str
@@ -156,27 +157,20 @@ class AnalysisResult(BaseModel):
     confidence: float
 
 async def analyze_with_gemini(content: str) -> AnalysisResult:
-    client = Anthropic()
+    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    model = genai.GenerativeModel('gemini-3-flash')
 
-    response = client.messages.create(
-        model="gemini-sonnet-4-5-20250514",
-        max_tokens=1024,
-        messages=[{"role": "user", "content": content}],
-        tools=[{
-            "name": "provide_analysis",
-            "description": "Provide structured analysis",
-            "input_schema": AnalysisResult.model_json_schema()
-        }],
-        tool_choice={"type": "tool", "name": "provide_analysis"}
+    prompt = f"Analyze this content and provide structured output: {content}"
+    
+    response = model.generate_content(
+        prompt,
+        generation_config={
+            "response_mime_type": "application/json",
+            "response_schema": AnalysisResult
+        }
     )
 
-    # Extract tool use result
-    tool_use = next(
-        block for block in response.content
-        if block.type == "tool_use"
-    )
-
-    return AnalysisResult(**tool_use.input)
+    return AnalysisResult.model_validate_json(response.text)
 ```
 
 ### Custom Hooks (React)
@@ -317,7 +311,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
 
 # Backend (.env)
 DATABASE_URL=postgresql://...
-ANTHROPIC_API_KEY=sk-ant-...
+GEMINI_API_KEY=AIza...
 SUPABASE_URL=https://xxx.supabase.co
 SUPABASE_KEY=eyJ...
 ```
@@ -343,4 +337,4 @@ SUPABASE_KEY=eyJ...
 - `backend-patterns.md` - API and database patterns
 - `frontend-patterns.md` - React and Next.js patterns
 - `tdd-workflow/` - Test-driven development methodology
-"""
+'''
