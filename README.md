@@ -21,7 +21,7 @@ Works across **Gemini CLI** natively, with compatibility for other AI agent harn
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Get up and running in under 2 minutes:
 
@@ -65,11 +65,11 @@ Try a newly installed command:
 /plan "Add user authentication"
 ```
 
-✨ **That's it!** You now have access to specialized agents, extensive skills (as commands), and rule enforcement.
+That's it! You now have access to specialized agents, extensive skills (as commands), and rule enforcement.
 
 ---
 
-## 🔌 ReAct Loop vs. Hooks
+## [Plugin] ReAct Loop vs. Hooks
 
 If you are coming from Claude Code, you may be familiar with "Hooks" (scripts that run before/after tasks). The Gemini CLI approach to this is different:
 
@@ -81,7 +81,7 @@ _Note: The `hooks/` directory and related shell scripts have been deprecated in 
 
 ---
 
-## 📦 What's Inside
+## [Package] What's Inside
 
 ```
 everything-gemini-code/
@@ -118,7 +118,7 @@ everything-gemini-code/
 
 ---
 
-## ⚙️ MCP Configuration
+## [Config] MCP Configuration
 
 Both tools support Model Context Protocol (MCP), but they are configured within `~/.gemini/settings.json`.
 
@@ -140,7 +140,7 @@ Copy desired MCP servers from `mcp-configs/mcp-servers.json` to your `~/.gemini/
 
 ---
 
-## 🗺️ Which Agent Should I Use?
+## [Map] Which Agent Should I Use?
 
 Not sure where to start? Use this quick reference:
 
@@ -173,7 +173,7 @@ Not sure where to start? Use this quick reference:
 
 ---
 
-## ⚠️ Context Window Management
+## [WARN] Context Window Management
 
 The Gemini CLI benefits from a **1,000,000+ token context window**, meaning you can import large, comprehensive documentation sets directly into your `GEMINI.md` context without hitting immediate performance constraints.
 
@@ -181,7 +181,7 @@ However, having too many MCP servers enabled can still crowd your context window
 
 ---
 
-## 📄 License
+## [Doc] License
 
 MIT - Use freely, modify as needed, contribute back if you can.
 

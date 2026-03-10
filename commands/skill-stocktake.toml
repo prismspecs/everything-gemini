@@ -62,8 +62,8 @@ Present the scan summary and inventory table from the script output:
 
 ```
 Scanning:
-  ✓ ~/.gemini/skills/         (17 files)
-  ✗ {cwd}/.gemini/skills/    (not found — global skills only)
+  [OK] ~/.gemini/skills/         (17 files)
+  [FAIL] {cwd}/.gemini/skills/    (not found — global skills only)
 ```
 
 | Skill | 7d use | 30d use | Description |

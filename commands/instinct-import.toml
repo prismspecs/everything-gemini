@@ -40,7 +40,7 @@ Import instincts from local file paths or HTTP(S) URLs.
 ## Import Process
 
 ```
-📥 Importing instincts from: team-instincts.yaml
+[Import] Importing instincts from: team-instincts.yaml
 ================================================
 
 Found 12 instincts to import.
@@ -49,19 +49,19 @@ Analyzing conflicts...
 
 ## New Instincts (8)
 These will be added:
-  ✓ use-zod-validation (confidence: 0.7)
-  ✓ prefer-named-exports (confidence: 0.65)
-  ✓ test-async-functions (confidence: 0.8)
+  [OK] use-zod-validation (confidence: 0.7)
+  [OK] prefer-named-exports (confidence: 0.65)
+  [OK] test-async-functions (confidence: 0.8)
   ...
 
 ## Duplicate Instincts (3)
 Already have similar instincts:
-  ⚠️ prefer-functional-style
+  [WARN] prefer-functional-style
      Local: 0.8 confidence, 12 observations
      Import: 0.7 confidence
      → Keep local (higher confidence)
 
-  ⚠️ test-first-workflow
+  [WARN] test-first-workflow
      Local: 0.75 confidence
      Import: 0.9 confidence
      → Update to import (higher confidence)
@@ -98,7 +98,7 @@ project_name: "my-project"
 
 After import:
 ```
-✅ Import complete!
+[OK] Import complete!
 
 Added: 8 instincts
 Updated: 1 instinct

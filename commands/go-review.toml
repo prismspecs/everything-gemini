@@ -77,8 +77,8 @@ Agent:
 - internal/service/auth.go (modified)
 
 ## Static Analysis Results
-✓ go vet: No issues
-✓ staticcheck: No issues
+[OK] go vet: No issues
+[OK] staticcheck: No issues
 
 ## Issues Found
 
@@ -122,16 +122,16 @@ return fmt.Errorf("get user %s: %w", userID, err)
 - HIGH: 1
 - MEDIUM: 0
 
-Recommendation: ❌ Block merge until CRITICAL issue is fixed
+Recommendation: [FAIL] Block merge until CRITICAL issue is fixed
 ```
 
 ## Approval Criteria
 
 | Status | Condition |
 |--------|-----------|
-| ✅ Approve | No CRITICAL or HIGH issues |
-| ⚠️ Warning | Only MEDIUM issues (merge with caution) |
-| ❌ Block | CRITICAL or HIGH issues found |
+| [OK] Approve | No CRITICAL or HIGH issues |
+| [WARN] Warning | Only MEDIUM issues (merge with caution) |
+| [FAIL] Block | CRITICAL or HIGH issues found |
 
 ## Integration with Other Commands
 

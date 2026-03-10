@@ -110,7 +110,7 @@ $ go test ./validator/...
 FAIL
 ```
 
-✓ Tests fail as expected (panic).
+[OK] Tests fail as expected (panic).
 
 ## Step 4: Implement Minimal Code (GREEN)
 
@@ -150,7 +150,7 @@ PASS
 ok      project/validator    0.003s
 ```
 
-✓ All tests passing!
+[OK] All tests passing!
 
 ## Step 6: Check Coverage
 
@@ -162,7 +162,7 @@ coverage: 100.0% of statements
 ok      project/validator    0.003s
 ```
 
-✓ Coverage: 100%
+[OK] Coverage: 100%
 
 ## TDD Complete!
 ````

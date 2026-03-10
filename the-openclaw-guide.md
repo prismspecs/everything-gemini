@@ -8,7 +8,7 @@
 
 I used OpenClaw for a week. This is what I found.
 
-> 📸 **[IMAGE: OpenClaw dashboard with multiple connected channels, annotated with attack surface labels on each integration point.]**
+> [IMAGE: OpenClaw dashboard with multiple connected channels, annotated with attack surface labels on each integration point.]
 > *The dashboard looks impressive. Each connection is also an unlocked door.*
 
 ---
@@ -29,7 +29,7 @@ I caught it because I read the source. I read every line of every skill I instal
 
 Nobody checked.
 
-> 📸 **[IMAGE: Terminal screenshot showing a ClawdHub skill file with a highlighted hidden instruction — the visible task definition on top, the injected system instruction revealed below. Redacted but showing the pattern.]**
+> [IMAGE: Terminal screenshot showing a ClawdHub skill file with a highlighted hidden instruction — the visible task definition on top, the injected system instruction revealed below. Redacted but showing the pattern.]
 > *The hidden instruction I found 12 lines into a "perfectly normal" ClawdHub skill. I caught it because I read the source.*
 
 There's a lot of surface area with OpenClaw. A lot of channels. A lot of integration points. A lot of community-contributed skills with no review process. And I realized, about four days in, that the people most enthusiastic about it were the people least equipped to evaluate the risks.
@@ -56,7 +56,7 @@ The pitch that "even your mum would use one" — I've heard that from the commun
 
 Then I started probing the security model. And the convenience stopped feeling worth it.
 
-> 📸 **[DIAGRAM: OpenClaw's multi-channel architecture — a central "ClawdBot" node connected to icons for Telegram, Discord, X, WhatsApp, Email, Browser, and File System. Each connection line labeled "attack vector" in red.]**
+> [DIAGRAM: OpenClaw's multi-channel architecture — a central "ClawdBot" node connected to icons for Telegram, Discord, X, WhatsApp, Email, Browser, and File System. Each connection line labeled "attack vector" in red.]
 > *Every integration you enable is another door you leave unlocked.*
 
 ---
@@ -77,7 +77,7 @@ You know those phishing emails you get — the ones trying to get you to click a
 
 **Step 4 — Escalation.** On many OpenClaw setups, the agent runs with broad filesystem access. A prompt injection that triggers shell execution is game over. That's root access to the device.
 
-> 📸 **[INFOGRAPHIC: 4-step attack chain as a vertical flowchart. Step 1 (Entry via Telegram) -> Step 2 (Prompt injection payload) -> Step 3 (Lateral movement across X, email, iMessage) -> Step 4 (Root access via shell execution). Background darkens from blue to red as severity escalates.]**
+> [INFOGRAPHIC: 4-step attack chain as a vertical flowchart. Step 1 (Entry via Telegram) -> Step 2 (Prompt injection payload) -> Step 3 (Lateral movement across X, email, iMessage) -> Step 4 (Root access via shell execution). Background darkens from blue to red as severity escalates.]
 > *The complete attack chain — from a plausible Telegram link to root access on your device.*
 
 Every step in this chain uses known, demonstrated techniques. Prompt injection is an unsolved problem in LLM security — Anthropic, OpenAI, and every other lab will tell you this. And OpenClaw's architecture **maximizes** the attack surface by design, because the value proposition is connecting as many channels as possible.
@@ -98,7 +98,7 @@ People tend to think of phishing as an email problem. It's not. It's a "anywhere
 
 Each of these is a distinct attack surface. Each of these is a real integration that real OpenClaw users are running right now. And each of these has the same fundamental vulnerability: the agent processes untrusted input with trusted permissions.
 
-> 📸 **[DIAGRAM: Hub-and-spoke showing a ClawdBot in the center with connections to Discord, WhatsApp, X, Telegram, Email. Each spoke shows the specific attack vector: "malicious link in channel", "prompt injection in message", "crafted DM", etc. Arrows show lateral movement possibilities between channels.]**
+> [DIAGRAM: Hub-and-spoke showing a ClawdBot in the center with connections to Discord, WhatsApp, X, Telegram, Email. Each spoke shows the specific attack vector: "malicious link in channel", "prompt injection in message", "crafted DM", etc. Arrows show lateral movement possibilities between channels.]
 > *Each channel is not just an integration — it's an injection point. And every injection point can pivot to every other channel.*
 
 ---
@@ -148,7 +148,7 @@ They think they installed a productivity tool. They actually deployed an autonom
 
 This is the paradox: **the people who can safely evaluate OpenClaw's risks don't need its orchestration layer. The people who need the orchestration layer can't safely evaluate its risks.**
 
-> 📸 **[VENN DIAGRAM: Two non-overlapping circles — "Can safely use OpenClaw" (technical users who don't need the GUI) and "Needs OpenClaw's GUI" (non-technical users who can't evaluate the risks). The empty intersection labeled "The Paradox".]**
+> [VENN DIAGRAM: Two non-overlapping circles — "Can safely use OpenClaw" (technical users who don't need the GUI) and "Needs OpenClaw's GUI" (non-technical users who can't evaluate the risks). The empty intersection labeled "The Paradox".]
 > *The OpenClaw paradox — the people who can safely use it don't need it.*
 
 ---
@@ -178,7 +178,7 @@ The root cause is instructive: Moltbook was almost entirely "vibe-coded" — bui
 
 If the platforms building agent infrastructure can't secure their own databases, what confidence should we have in unvetted community contributions running on those platforms?
 
-> 📸 **[DATA VISUALIZATION: Stat card showing the Moltbook breach numbers — "1.49M records exposed", "32K+ API keys", "35K emails", "Karpathy's bot API key included" — with source logos below.]**
+> [DATA VISUALIZATION: Stat card showing the Moltbook breach numbers — "1.49M records exposed", "32K+ API keys", "35K emails", "Karpathy's bot API key included" — with source logos below.]
 > *The Moltbook breach by the numbers.*
 
 ### The ClawdHub Marketplace Problem
@@ -204,7 +204,7 @@ Let that number sink in for a moment. One in five skills in the marketplace is m
 
 This is `curl mystery-url.com | bash` for the agent era. Except instead of running an unknown shell script, you're injecting unknown prompt engineering into an agent that has access to your accounts, your files, and your communication channels.
 
-> 📸 **[TIMELINE GRAPHIC: "Jan 27 — 230+ malicious skills uploaded" -> "Jan 30 — CVE-2026-25253 disclosed" -> "Jan 31 — Moltbook breach discovered" -> "Feb 2026 — 800+ malicious skills confirmed". Three major security incidents in one week.]**
+> [TIMELINE GRAPHIC: "Jan 27 — 230+ malicious skills uploaded" -> "Jan 30 — CVE-2026-25253 disclosed" -> "Jan 31 — Moltbook breach discovered" -> "Feb 2026 — 800+ malicious skills confirmed". Three major security incidents in one week.]
 > *Three major security incidents in a single week. This is the pace of risk in the agent ecosystem.*
 
 ### CVE-2026-25253: One Click to Full Compromise
@@ -234,7 +234,7 @@ A Meta AI researcher had her entire email inbox deleted by an OpenClaw agent. No
 
 These are not anonymous Reddit posts or hypothetical scenarios. These are CVEs with CVSS scores, coordinated malware campaigns documented by multiple security firms, million-record database breaches confirmed by independent researchers, and incident reports from the largest cybersecurity organizations in the world. The evidence base for concern is not thin. It is overwhelming.
 
-> 📸 **[QUOTE CARD: Split design — Left: CrowdStrike quote "transforms prompt injection into a full-scale breach enabler." Right: Palo Alto Networks quote "the lethal trifecta... excessive agency built into its architecture." CVSS 8.8 badge in center.]**
+> [QUOTE CARD: Split design — Left: CrowdStrike quote "transforms prompt injection into a full-scale breach enabler." Right: Palo Alto Networks quote "the lethal trifecta... excessive agency built into its architecture." CVSS 8.8 badge in center.]
 > *Two of the world's largest cybersecurity firms, independently reaching the same conclusion.*
 
 ### The Organized Jailbreaking Ecosystem
@@ -255,7 +255,7 @@ An attacker doesn't need to target each user individually. They need one effecti
 
 Defense is centralized (a handful of labs working on safety). Offense is distributed (a global community iterating around the clock). More channels means more injection points means more opportunities for the attack to land. The model only needs to fail once. The attacker gets unlimited attempts across every connected channel.
 
-> 📸 **[DIAGRAM: "The Adversarial Pipeline" — left-to-right flow: "Abliterated Model (HuggingFace)" -> "Jailbreak Development" -> "Technique Refinement" -> "Production Model Exploit" -> "Delivery via OpenClaw Channel". Each stage labeled with its tooling.]**
+> [DIAGRAM: "The Adversarial Pipeline" — left-to-right flow: "Abliterated Model (HuggingFace)" -> "Jailbreak Development" -> "Technique Refinement" -> "Production Model Exploit" -> "Delivery via OpenClaw Channel". Each stage labeled with its tooling.]
 > *The attack pipeline: from abliterated model to production exploit to delivery through your agent's connected channels.*
 
 ---
@@ -292,7 +292,7 @@ The alternative for technical users is a repository with a MiniClaw — and by M
 | **Blast radius** | Everything the agent can access | Sandboxed to project directory |
 | **Security posture** | Implicit (you don't know what you're exposed to) | Explicit (you chose every permission) |
 
-> 📸 **[COMPARISON TABLE AS INFOGRAPHIC: The MiniClaw vs OpenClaw table above rendered as a shareable dark-background graphic with green checkmarks for MiniClaw and red indicators for OpenClaw risks.]**
+> [COMPARISON TABLE AS INFOGRAPHIC: The MiniClaw vs OpenClaw table above rendered as a shareable dark-background graphic with green checkmarks for MiniClaw and red indicators for OpenClaw risks.]
 > *MiniClaw philosophy: 90% of the productivity, 5% of the attack surface.*
 
 My actual setup:
@@ -330,12 +330,12 @@ All of the functionality OpenClaw provides can be replicated with skills and har
 
 **Multiple points of access is a bug, not a feature.**
 
-> 📸 **[SPLIT IMAGE: Left — "Locked Door" showing a single SSH terminal with key-based auth. Right — "Open House" showing the multi-channel OpenClaw dashboard with 7+ connected services. Visual contrast between minimal and maximal attack surfaces.]**
+> [SPLIT IMAGE: Left — "Locked Door" showing a single SSH terminal with key-based auth. Right — "Open House" showing the multi-channel OpenClaw dashboard with 7+ connected services. Visual contrast between minimal and maximal attack surfaces.]
 > *Left: one access point, one lock. Right: seven doors, each one unlocked.*
 
 Sometimes boring is better.
 
-> 📸 **[SCREENSHOT: Author's actual terminal — tmux session with Gemini Code running on Mac Mini over SSH. Clean, minimal, no dashboard. Annotations: "SSH only", "No exposed ports", "Scoped permissions".]**
+> [SCREENSHOT: Author's actual terminal — tmux session with Gemini Code running on Mac Mini over SSH. Clean, minimal, no dashboard. Annotations: "SSH only", "No exposed ports", "Scoped permissions".]
 > *My actual setup. No multi-channel dashboard. Just a terminal, SSH, and Gemini Code.*
 
 ### The Cost of Convenience
@@ -378,7 +378,7 @@ For non-technical users: wait for the hosted, sandboxed versions. They're coming
 
 I want to be honest about the counter-argument here, because it's not trivial. For non-technical users who genuinely need AI automation, the alternative I'm describing — headless servers, SSH, tmux — is inaccessible. Telling a marketing manager to "just SSH into a Mac Mini" isn't a solution. It's a dismissal. The right answer for non-technical users is not "don't use recursive agents." It's "use them in a sandboxed, hosted, professionally managed environment where someone else's job is to handle security." You pay a subscription fee. In return, you get peace of mind. That model is coming. Until it arrives, the risk calculus on self-hosted multi-channel agents is heavily skewed toward "not worth it."
 
-> 📸 **[DIAGRAM: "The Winning Architecture" — a layered stack showing: Hosted Infrastructure (bottom) -> Sandboxed Containers (middle) -> Audited Skills + Minimal Permissions (upper) -> Clean Dashboard (top). Each layer labeled with its security property. Contrast with OpenClaw's flat architecture where everything runs on the user's machine.]**
+> [DIAGRAM: "The Winning Architecture" — a layered stack showing: Hosted Infrastructure (bottom) -> Sandboxed Containers (middle) -> Audited Skills + Minimal Permissions (upper) -> Clean Dashboard (top). Each layer labeled with its security property. Contrast with OpenClaw's flat architecture where everything runs on the user's machine.]
 > *What the winning recursive agent architecture looks like.*
 
 ---
@@ -411,7 +411,7 @@ The biggest opportunity isn't more features or more integrations. It's building 
 
 The playbook is clear: hosted infrastructure so users don't manage servers, sandboxed execution so compromise is contained, an audited skill marketplace so supply chain attacks get caught before they reach users, and transparent logging so everyone can see what their agent is doing. This is all solvable with known technology. The question is whether anyone prioritizes it over growth speed.
 
-> 📸 **[CHECKLIST GRAPHIC: The 5-point "If you're running OpenClaw today" list rendered as a visual checklist with checkboxes, designed for sharing.]**
+> [CHECKLIST GRAPHIC: The 5-point "If you're running OpenClaw today" list rendered as a visual checklist with checkboxes, designed for sharing.]
 > *The minimum security checklist for current OpenClaw users.*
 
 ---

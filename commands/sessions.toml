@@ -145,9 +145,9 @@ if (!session) {
 
 const result = aa.setAlias(aliasName, session.filename);
 if (result.success) {
-  console.log('✓ Alias created: ' + aliasName + ' → ' + session.filename);
+  console.log('[OK] Alias created: ' + aliasName + ' → ' + session.filename);
 } else {
-  console.log('✗ Error: ' + result.error);
+  console.log('[FAIL] Error: ' + result.error);
   process.exit(1);
 }
 " "$ARGUMENTS"
@@ -175,9 +175,9 @@ if (!aliasName) {
 
 const result = aa.deleteAlias(aliasName);
 if (result.success) {
-  console.log('✓ Alias removed: ' + aliasName);
+  console.log('[OK] Alias removed: ' + aliasName);
 } else {
-  console.log('✗ Error: ' + result.error);
+  console.log('[FAIL] Error: ' + result.error);
   process.exit(1);
 }
 " "$ARGUMENTS"

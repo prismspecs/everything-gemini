@@ -85,10 +85,10 @@ Agent:
 - app/services/auth.py (modified)
 
 ## Static Analysis Results
-✓ ruff: No issues
-✓ mypy: No errors
-⚠️ black: 2 files need reformatting
-✓ bandit: No security issues
+[OK] ruff: No issues
+[OK] mypy: No errors
+[WARN] black: 2 files need reformatting
+[OK] bandit: No security issues
 
 ## Issues Found
 
@@ -153,7 +153,7 @@ with open("config.json") as f:  # Good
 - HIGH: 1
 - MEDIUM: 2
 
-Recommendation: ❌ Block merge until CRITICAL issue is fixed
+Recommendation: [FAIL] Block merge until CRITICAL issue is fixed
 
 ## Formatting Required
 Run: `black app/routes/user.py app/services/auth.py`
@@ -163,9 +163,9 @@ Run: `black app/routes/user.py app/services/auth.py`
 
 | Status | Condition |
 |--------|-----------|
-| ✅ Approve | No CRITICAL or HIGH issues |
-| ⚠️ Warning | Only MEDIUM issues (merge with caution) |
-| ❌ Block | CRITICAL or HIGH issues found |
+| [OK] Approve | No CRITICAL or HIGH issues |
+| [WARN] Warning | Only MEDIUM issues (merge with caution) |
+| [FAIL] Block | CRITICAL or HIGH issues found |
 
 ## Integration with Other Commands
 
