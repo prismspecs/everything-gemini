@@ -25,38 +25,20 @@ Works across **Gemini CLI** natively, with compatibility for other AI agent harn
 
 Get up and running in under 2 minutes:
 
-### Step 1: Install Commands
+### Step 1: Install Commands & Rules (Symlink)
 
-Gemini CLI handles skills and commands as custom commands defined in `.toml` files located in `~/.gemini/commands/`.
+The `install.sh` script will create symlinks from this repository directly into your `~/.gemini/` folder. This means whenever you `git pull` updates for this repository, your Gemini CLI commands and rules will update automatically!
 
 ```bash
 # Clone the repository
 git clone https://github.com/affaan-m/everything-gemini-code.git
 cd everything-gemini-code
 
-# Create Gemini commands directory
-mkdir -p ~/.gemini/commands
-
-# Copy commands over
-cp -r commands/* ~/.gemini/commands/
+# Run the install script to symlink everything
+./install.sh
 ```
 
-### Step 2: Install Rules
-
-Gemini CLI uses a hierarchical import system using the `@` symbol within your `GEMINI.md` file.
-
-```bash
-# Create Gemini rules directory
-mkdir -p ~/.gemini/rules
-
-# Copy rules (common + language-specific)
-cp -r rules/common/* ~/.gemini/rules/
-cp -r rules/typescript/* ~/.gemini/rules/   # pick your stack
-cp -r rules/python/* ~/.gemini/rules/
-cp -r rules/golang/* ~/.gemini/rules/
-```
-
-Reference them in your project's `GEMINI.md`:
+### Step 2: Configure Project (`GEMINI.md`)
 
 ```markdown
 # Project Context: [Project Name]
