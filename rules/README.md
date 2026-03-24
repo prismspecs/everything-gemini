@@ -40,7 +40,6 @@ Gemini CLI supports importing rule files directly into your project's `GEMINI.md
 
 ## Installation
 
-
 ### Option 1: Install Script (Recommended)
 
 ```bash

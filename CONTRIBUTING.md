@@ -49,7 +49,7 @@ Slash commands that invoke useful workflows:
 
 ```bash
 # 1. Fork and clone
-gh repo fork affaan-m/everything-gemini-code --clone
+gh repo fork prismspecs/everything-gemini-code --clone
 cd everything-gemini-code
 
 # 2. Create a branch
@@ -417,7 +417,7 @@ How you tested this.
 
 ## Questions?
 
-- **Issues:** [github.com/affaan-m/everything-gemini-code/issues](https://github.com/affaan-m/everything-gemini-code/issues)
+- **Issues:** [github.com/prismspecs/everything-gemini-code/issues](https://github.com/prismspecs/everything-gemini-code/issues)
 - **X/Twitter:** [@affaanmustafa](https://x.com/affaanmustafa)
 
 ---

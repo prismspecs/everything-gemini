@@ -1,0 +1,7 @@
+description = "Switch the current session to the gemini-3-pro model for complex reasoning."
+prompt = '''
+Switch the current session to `gemini-3-pro`.
+
+1. Run `/model set gemini-3-pro`
+2. Confirm the model switch.
+'''

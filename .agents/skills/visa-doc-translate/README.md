@@ -75,11 +75,11 @@ pip install pytesseract
 
 ## Perfect For
 
--  Australia visa applications
--  USA visa applications
--  Canada visa applications
--  UK visa applications
--  EU visa applications
+- Australia visa applications
+- USA visa applications
+- Canada visa applications
+- UK visa applications
+- EU visa applications
 
 ## License
 

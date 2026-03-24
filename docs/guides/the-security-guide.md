@@ -486,7 +486,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: affaan-m/agentshield@v1
+      - uses: prismspecs/agentshield@v1
         with:
           path: '.'
           fail-on: 'critical'
@@ -569,7 +569,7 @@ The patterns in this guide aren't complex. They're habits. Build them into your 
 
 **ECC Ecosystem:**
 - [AgentShield on npm](https://www.npmjs.com/package/ecc-agentshield) — Zero-install agent security scanning
-- [Everything Gemini Code](https://github.com/affaan-m/everything-gemini-code) — 50K+ stars, production-ready agent configurations
+- [Everything Gemini Code](https://github.com/prismspecs/everything-gemini-code) — 50K+ stars, production-ready agent configurations
 - [The Shorthand Guide](./the-shortform-guide.md) — Setup and configuration fundamentals
 - [The Longform Guide](./the-longform-guide.md) — Advanced patterns and optimization
 - [The OpenClaw Guide](./the-openclaw-guide.md) — Security lessons from the agent frontier

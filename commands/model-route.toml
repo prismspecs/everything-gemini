@@ -10,8 +10,14 @@ Recommend the best model tier for the current task by complexity and budget.
 
 ## Routing Heuristic
 
-- `gemini-3-flash`: deterministic, low-risk mechanical changes, implementation and refactors
-- `gemini-3-pro`: architecture, deep review, ambiguous requirements
+- `gemini-3-flash`: 
+  - deterministic, low-risk mechanical changes
+  - implementation and refactors
+  - **Context Threshold**: Use if context > 100k tokens and task is a single-file edit or documentation.
+- `gemini-3-pro`: 
+  - architecture, deep review, ambiguous requirements
+  - security-sensitive logic
+  - debugging subtle interactions across multiple files
 
 ## Required Output
 

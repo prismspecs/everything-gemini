@@ -45,7 +45,7 @@ Use the right model for the task:
 |-------|----------|------|
 | **gemini-3-flash** | Day-to-day coding, exploration, file reading, simple lookups | Lowest |
 | **gemini-3-pro** | Complex architecture, multi-step reasoning, debugging subtle issues | Medium |
-| **gemini-1.5-pro** | Large context tasks requiring deep reasoning | Medium |
+| **gemini-3-pro** | Large context tasks requiring deep reasoning | Medium |
 
 Switch models mid-session:
 

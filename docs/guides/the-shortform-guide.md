@@ -211,7 +211,7 @@ git worktree add ../feature-branch feature-branch
 
 Stream and watch logs/bash processes Gemini runs:
 
-https://github.com/user-attachments/assets/shortform/07-tmux-video.mp4
+<https://github.com/user-attachments/assets/shortform/07-tmux-video.mp4>
 
 ```bash
 tmux new -s dev

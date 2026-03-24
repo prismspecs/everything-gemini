@@ -2,7 +2,7 @@ description = "Scan your Gemini Code configuration (.gemini/ directory) for secu
 prompt = '''
 # Security Scan Skill
 
-Audit your Gemini Code configuration for security issues using [AgentShield](https://github.com/affaan-m/agentshield).
+Audit your Gemini Code configuration for security issues using [AgentShield](https://github.com/prismspecs/agentshield).
 
 ## When to Activate
 
@@ -116,7 +116,7 @@ Creates:
 Add to your CI pipeline:
 
 ```yaml
-- uses: affaan-m/agentshield@v1
+- uses: prismspecs/agentshield@v1
   with:
     path: '.'
     min-severity: 'medium'
@@ -157,6 +157,6 @@ Add to your CI pipeline:
 
 ## Links
 
-- **GitHub**: [github.com/affaan-m/agentshield](https://github.com/affaan-m/agentshield)
+- **GitHub**: [github.com/prismspecs/agentshield](https://github.com/prismspecs/agentshield)
 - **npm**: [npmjs.com/package/ecc-agentshield](https://www.npmjs.com/package/ecc-agentshield)
 '''

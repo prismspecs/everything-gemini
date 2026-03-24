@@ -1,8 +1,8 @@
 # Everything Gemini Code
 
-[![Stars](https://img.shields.io/github/stars/affaan-m/everything-gemini-code?style=flat)](https://github.com/affaan-m/everything-gemini-code/stargazers)
-[![Forks](https://img.shields.io/github/forks/affaan-m/everything-gemini-code?style=flat)](https://github.com/affaan-m/everything-gemini-code/network/members)
-[![Contributors](https://img.shields.io/github/contributors/affaan-m/everything-gemini-code?style=flat)](https://github.com/affaan-m/everything-gemini-code/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/stargazers)
+[![Forks](https://img.shields.io/github/forks/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/network/members)
+[![Contributors](https://img.shields.io/github/contributors/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/graphs/contributors)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
@@ -31,7 +31,7 @@ The `install.sh` script will create symlinks from this repository directly into 
 
 ```bash
 # Clone the repository
-git clone https://github.com/affaan-m/everything-gemini-code.git
+git clone https://github.com/prismspecs/everything-gemini-code.git
 cd everything-gemini-code
 
 # Run the install script to symlink everything

@@ -122,14 +122,15 @@ Troubleshoot failures: check test isolation → verify mocks → fix implementat
 ## Project Structure
 
 ```
+.agents/         — Hidden configuration and source skills
 agents/          — 13 specialized subagents
-skills/          — 50+ workflow skills and domain knowledge
+skills/          — Symlink to .agents/skills (workflow skills)
 commands/        — 33 slash commands
-hooks/           — Trigger-based automations
 rules/           — Always-follow guidelines (common + per-language)
-scripts/         — Cross-platform Node.js utilities
 mcp-configs/     — 14 MCP server configurations
-tests/           — Test suite
+docs/            — Project documentation and guides
+contexts/        — Agent session contexts
+examples/        — Usage examples and configurations
 ```
 
 ## Success Metrics

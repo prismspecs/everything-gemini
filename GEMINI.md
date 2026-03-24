@@ -6,30 +6,19 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 
 This is a **Gemini Code plugin** - a collection of production-ready agents, skills, hooks, commands, rules, and MCP configurations. The project provides battle-tested workflows for software development using Gemini Code.
 
-## Running Tests
-
-```bash
-# Run all tests
-node tests/run-all.js
-
-# Run individual test files
-node tests/lib/utils.test.js
-node tests/lib/package-manager.test.js
-node tests/hooks/hooks.test.js
-```
-
 ## Architecture
 
 The project is organized into several core components:
 
+- **.agents/** - Hidden configuration and source skills
 - **agents/** - Specialized subagents for delegation (planner, code-reviewer, tdd-guide, etc.)
-- **skills/** - Workflow definitions and domain knowledge (coding standards, patterns, testing)
+- **skills/** - Symlink to .agents/skills (workflow definitions and domain knowledge)
 - **commands/** - Slash commands invoked by users (/tdd, /planner, /e2e, etc.)
-- **hooks/** - Trigger-based automations (session persistence, pre/post-tool hooks)
 - **rules/** - Always-follow guidelines (security, coding style, testing requirements)
 - **mcp-configs/** - MCP server configurations for external integrations
-- **scripts/** - Cross-platform Node.js utilities for hooks and setup
-- **tests/** - Test suite for scripts and utilities
+- **docs/** - Project documentation and guides
+- **contexts/** - Agent session contexts
+- **examples/** - Usage examples and configurations
 
 ## Key Commands
 
