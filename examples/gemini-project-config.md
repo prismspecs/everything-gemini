@@ -97,7 +97,7 @@ DEBUG=false
 ## Available Commands
 
 - `/tdd` - Test-driven development workflow
-- `/plan` - Create implementation plan
+- `/planner` - Create implementation plan
 - `/code-review` - Review code quality
 - `/build-fix` - Fix build errors
 

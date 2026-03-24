@@ -113,18 +113,18 @@ Optimize the tools you use and subagent architecture designed to delegate the ch
 ![Model Selection Table](./assets/images/longform/04-model-selection.png)
 *Hypothetical setup of subagents on various common tasks and reasoning behind the choices*
 
-| Task Type                 | Model  | Why                                        |
-| ------------------------- | ------ | ------------------------------------------ |
-| Exploration/search        | Haiku  | Fast, cheap, good enough for finding files |
-| Simple edits              | Haiku  | Single-file changes, clear instructions    |
-| Multi-file implementation | Sonnet | Best balance for coding                    |
-| Complex architecture      | Opus   | Deep reasoning needed                      |
-| PR reviews                | Sonnet | Understands context, catches nuance        |
-| Security analysis         | Opus   | Can't afford to miss vulnerabilities       |
-| Writing docs              | Haiku  | Structure is simple                        |
-| Debugging complex bugs    | Opus   | Needs to hold entire system in mind        |
+| Task Type                 | Model          | Why                                        |
+| ------------------------- | -------------- | ------------------------------------------ |
+| Exploration/search        | gemini-3-flash | Fast, cheap, good enough for finding files |
+| Simple edits              | gemini-3-flash | Single-file changes, clear instructions    |
+| Multi-file implementation | gemini-3-pro   | Best balance for coding                    |
+| Complex architecture      | gemini-3-pro   | Deep reasoning needed                      |
+| PR reviews                | gemini-3-pro   | Understands context, catches nuance        |
+| Security analysis         | gemini-3-pro   | Can't afford to miss vulnerabilities       |
+| Writing docs              | gemini-3-flash | Structure is simple                        |
+| Debugging complex bugs    | gemini-3-pro   | Needs to hold entire system in mind        |
 
-Default to Sonnet for 90% of coding tasks. Upgrade to Opus when first attempt failed, task spans 5+ files, architectural decisions, or security-critical code.
+Default to gemini-3-pro for 90% of coding tasks. Upgrade to the reasoning tier when first attempt failed, task spans 5+ files, architectural decisions, or security-critical code.
 
 **Pricing Reference:**
 
@@ -182,7 +182,7 @@ Main chat for code changes, forks for questions about the codebase and its curre
 **On Arbitrary Terminal Counts:**
 
 ![Boris on Parallel Terminals](./assets/images/longform/07-boris-parallel.png)
-*Boris (Anthropic) on running multiple Gemini instances*
+*Boris (Google) on running multiple Gemini instances*
 
 Boris has tips on parallelization. He's suggested things like running 5 Gemini instances locally and 5 upstream. I advise against setting arbitrary terminal amounts. The addition of a terminal should be out of true necessity.
 
@@ -334,15 +334,11 @@ alias q='cd ~/Desktop/projects'
 
 - system-prompts-and-models-of-ai-tools — Community collection of AI system prompts (110k+ stars)
 
-**Official:**
-
-- Anthropic Academy: anthropic.skilljar.com
-
 ---
 
 ## References
 
-- [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+- [Google: Demystifying evals for AI agents](https://www.google.com/search?q=demystifying+evals+for+AI+agents)
 - [YK: 32 Gemini Code Tips](https://agenticcoding.substack.com/p/32-gemini-code-tips-from-basics-to)
 - [RLanceMartin: Session Reflection Pattern](https://rlancemartin.github.io/2025/12/01/gemini_diary/)
 - @PerceptualPeak: Sub-Agent Context Negotiation

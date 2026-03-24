@@ -9,7 +9,7 @@
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 ![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
 
-> **50K+ stars** | **6K+ forks** | **30 contributors** | **Anthropic Hackathon Winner (Adapted for Gemini)**
+> **50K+ stars** | **6K+ forks** | **30 contributors** | **Google Hackathon Winner (Adapted for Gemini)**
 
 ---
 
@@ -62,16 +62,16 @@ gemini --yolo
 Try a newly installed command:
 
 ```bash
-/plan "Add user authentication"
+/planner "Add user authentication"
 ```
 
-That's it! You now have access to specialized agents, extensive skills (as commands), and rule enforcement.
+That's it! You now have access to specialized agents, specialized skills (as commands), and rule enforcement.
 
 ---
 
 ## [Plugin] ReAct Loop vs. Hooks
 
-If you are coming from Claude Code, you may be familiar with "Hooks" (scripts that run before/after tasks). The Gemini CLI approach to this is different:
+If you are coming from other AI coding tools, you may be familiar with "Hooks" (scripts that run before/after tasks). The Gemini CLI approach to this is different:
 
 - **Built-in Tools & ReAct:** Gemini CLI relies heavily on its **ReAct loop** and built-in tools rather than static pre/post hook execution.
 - **Tool Authorization:** Instead of complex hook validation, use the `--yolo` flag with the Gemini CLI to mimic the autonomous execution capability, allowing Gemini to freely loop through its reasoning and tool executions.
@@ -93,7 +93,7 @@ everything-gemini-code/
 |
 |-- commands/         # Slash commands for quick execution (.toml format)
 |   |-- tdd.toml              # /tdd - Test-driven development
-|   |-- plan.toml             # /plan - Implementation planning
+|   |-- planner.toml          # /planner - Custom implementation planning
 |   |-- e2e.toml              # /e2e - E2E test generation
 |   |-- code-review.toml      # /code-review - Quality review
 |   |-- search-first.toml     # /search-first - Research before coding
@@ -146,8 +146,9 @@ Not sure where to start? Use this quick reference:
 
 | I want to... | Use this command |
 |--------------|-----------------|
-| Plan a new feature | `/plan "Add auth"` |
-| Design system architecture | `/plan` + architect agent |
+| Plan a new feature | `/planner "Add auth"` |
+| Design system architecture | `/planner` + architect agent |
+| Create high-quality UI/UX | `/impeccable` + designer agent |
 | Write code with tests first | `/tdd` |
 | Review code I just wrote | `/code-review` |
 | Fix a failing build | `/build-fix` |
@@ -159,7 +160,7 @@ Not sure where to start? Use this quick reference:
 
 **Starting a new feature:**
 ```
-/plan "Add user authentication with OAuth"    → creates implementation blueprint
+/planner "Add user authentication with OAuth"    → creates implementation blueprint
 /tdd                                          → enforces write-tests-first
 /code-review                                  → checks your work
 ```

@@ -1,0 +1,51 @@
+description = "Impeccable Frontend Design system: 20 commands to audit, review, and polish distinctive UI/UX."
+prompt = '''
+# Impeccable Frontend Design
+
+The vocabulary you didn't know you needed. High-signal commands for impeccable frontend design.
+
+## Usage
+
+`/impeccable [command] [target]`
+
+## Steering Commands
+
+| Command | Description |
+|---------|-------------|
+| `teach` | Setup: gather target audience, use cases, brand tone |
+| `audit` | Technical quality checks (a11y, performance, responsive) |
+| `critique` | UX design review: hierarchy, clarity, emotional resonance |
+| `normalize` | Align with design system standards |
+| `polish` | Final pass before shipping |
+| `distill` | Strip to essence |
+| `clarify` | Improve unclear UX copy |
+| `optimize` | Performance improvements |
+| `harden` | Error handling, i18n, edge cases |
+| `animate` | Add purposeful motion |
+| `colorize` | Introduce strategic color |
+| `bolder` | Amplify boring designs |
+| `quieter` | Tone down overly bold designs |
+| `delight` | Add moments of joy |
+| `extract` | Pull into reusable components |
+| `adapt` | Adapt for different devices |
+| `onboard` | Design onboarding flows |
+| `typeset` | Fix font choices, hierarchy, sizing |
+| `arrange` | Fix layout, spacing, visual rhythm |
+| `overdrive` | Add technically extraordinary effects |
+
+## Workflow
+
+1. **Setup**: Run `/impeccable teach` to provide project context.
+2. **Implement**: Ask Gemini or the `impeccable-designer` agent to build components.
+3. **Refine**: Use `audit`, `critique`, and `polish` to reach production grade.
+
+## Core Directives
+
+- **Combat AI Slop**: No Inter, no purple gradients, no gray-on-color.
+- **Modern CSS**: Use OKLCH, container queries, and fluid typography (`clamp`).
+- **Intentionality**: Every choice must reinforce the brand and purpose.
+
+---
+
+**Note**: Based on Paul Bakaus's Impeccable system. Refer to `skills/impeccable-frontend/SKILL.md` for deep domain knowledge.
+'''

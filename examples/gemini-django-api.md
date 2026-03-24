@@ -292,7 +292,7 @@ pytest --lf
 
 ```bash
 # Planning
-/plan "Add order refund system with Stripe integration"
+/planner "Add order refund system with Stripe integration"
 
 # Development with TDD
 /tdd                    # pytest-based TDD workflow

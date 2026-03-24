@@ -251,7 +251,7 @@ go test ./... -race -count=1
 
 ```bash
 # Planning
-/plan "Add rate limiting to user endpoints"
+/planner "Add rate limiting to user endpoints"
 
 # Development
 /go-test                  # TDD with Go-specific patterns

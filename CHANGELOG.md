@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.9.0 - 2026-03-23
+
+### Core
+
+- Renamed `commands/plan.toml` to `commands/planner.toml` to avoid conflict with the built-in `/plan` command.
+- Removed 16 redundant `.toml` files in `commands/` that were duplicates of skills in `.agents/skills/`.
+- Removed 58 empty directories from the `skills/` folder.
+
+### Documentation
+
+- Updated `README.md`, `GEMINI.md`, and all `examples/*.md` files to use `/planner` instead of `/plan`.
+
+### Infrastructure
+
+- Cleaned up broken symlinks in `~/.gemini/commands/`.
+- Refreshed symlinks by running `install.sh`.
+
 ## 1.8.0 - 2026-03-04
 
 ### Highlights

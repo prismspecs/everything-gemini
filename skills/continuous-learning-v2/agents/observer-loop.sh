@@ -80,7 +80,7 @@ PROMPT
   timeout_seconds="${ECC_OBSERVER_TIMEOUT_SECONDS:-120}"
   exit_code=0
 
-  gemini --model haiku --max-turns 3 --print < "$prompt_file" >> "$LOG_FILE" 2>&1 &
+  gemini --model gemini-3-flash --max-turns 3 --print < "$prompt_file" >> "$LOG_FILE" 2>&1 &
   gemini_pid=$!
 
   (

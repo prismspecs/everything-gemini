@@ -1,7 +1,7 @@
 ---
 name: observer
-description: Background agent that analyzes session observations to detect patterns and create instincts. Uses Haiku for cost-efficiency. v2.1 adds project-scoped instincts.
-model: haiku
+description: Background agent that analyzes session observations to detect patterns and create instincts. Uses Gemini 3 Flash for cost-efficiency. v2.1 adds project-scoped instincts.
+model: gemini-3-flash
 ---
 
 # Observer Agent

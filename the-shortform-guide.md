@@ -1,10 +1,10 @@
 # The Shorthand Guide to Everything Gemini Code
 
-![Header: Anthropic Hackathon Winner - Tips & Tricks for Gemini Code](./assets/images/shortform/00-header.png)
+![Header: Google Hackathon Winner - Tips & Tricks for Gemini Code](./assets/images/shortform/00-header.png)
 
 ---
 
-**Been an avid Gemini Code user since the experimental rollout in Feb, and won the Anthropic x Forum Ventures hackathon with [zenith.chat](https://zenith.chat) alongside [@DRodriguezFX](https://x.com/DRodriguezFX) - completely using Gemini Code.**
+**Been an avid Gemini Code user since the experimental rollout in Feb, and won the Google x Forum Ventures hackathon with [zenith.chat](https://zenith.chat) alongside [@DRodriguezFX](https://x.com/DRodriguezFX) - completely using Gemini Code.**
 
 Here's my complete setup after 10 months of daily use: skills, hooks, subagents, MCPs, plugins, and what actually works.
 
@@ -14,7 +14,7 @@ Here's my complete setup after 10 months of daily use: skills, hooks, subagents,
 
 Skills operate like rules, constricted to certain scopes and workflows. They're shorthand to prompts when you need to execute a particular workflow.
 
-After a long session of coding with Opus 4.5, you want to clean out dead code and loose .md files? Run `/refactor-clean`. Need testing? `/tdd`, `/e2e`, `/test-coverage`. Skills can also include codemaps - a way for Gemini to quickly navigate your codebase without burning context on exploration.
+After a long session of coding with gemini-3-pro, you want to clean out dead code and loose .md files? Run `/refactor-clean`. Need testing? `/tdd`, `/e2e`, `/test-coverage`. Skills can also include codemaps - a way for Gemini to quickly navigate your codebase without burning context on exploration.
 
 ![Terminal showing chained commands](./assets/images/shortform/02-chaining-commands.jpeg)
 *Chaining commands together*
@@ -367,7 +367,7 @@ Shows user, directory, git branch with dirty indicator, context remaining %, mod
 *Example statusline in my Mac root directory*
 
 ```
-affoon:~ ctx:65% Opus 4.5 19:52
+affoon:~ ctx:65% gemini-3-pro 19:52
 ▌▌ plan mode on (shift+tab to cycle)
 ```
 
@@ -381,7 +381,7 @@ affoon:~ ctx:65% Opus 4.5 19:52
   git-workflow.md  # Conventional commits
   agents.md        # Subagent delegation rules
   patterns.md      # API response formats
-  performance.md   # Model selection (Haiku vs Sonnet vs Opus)
+  performance.md   # Model selection (gemini-3-flash vs gemini-3-pro)
   hooks.md         # Hook documentation
 ```
 
@@ -428,4 +428,4 @@ affoon:~ ctx:65% Opus 4.5 19:52
 
 ---
 
-*Won the Anthropic x Forum Ventures hackathon in NYC building [zenith.chat](https://zenith.chat) with [@DRodriguezFX](https://x.com/DRodriguezFX)*
+*Won the Google x Forum Ventures hackathon in NYC building [zenith.chat](https://zenith.chat) with [@DRodriguezFX](https://x.com/DRodriguezFX)*

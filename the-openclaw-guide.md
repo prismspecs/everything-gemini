@@ -80,7 +80,7 @@ You know those phishing emails you get — the ones trying to get you to click a
 > [INFOGRAPHIC: 4-step attack chain as a vertical flowchart. Step 1 (Entry via Telegram) -> Step 2 (Prompt injection payload) -> Step 3 (Lateral movement across X, email, iMessage) -> Step 4 (Root access via shell execution). Background darkens from blue to red as severity escalates.]
 > *The complete attack chain — from a plausible Telegram link to root access on your device.*
 
-Every step in this chain uses known, demonstrated techniques. Prompt injection is an unsolved problem in LLM security — Anthropic, OpenAI, and every other lab will tell you this. And OpenClaw's architecture **maximizes** the attack surface by design, because the value proposition is connecting as many channels as possible.
+Every step in this chain uses known, demonstrated techniques. Prompt injection is an unsolved problem in LLM security — Google, OpenAI, and every other lab will tell you this. And OpenClaw's architecture **maximizes** the attack surface by design, because the value proposition is connecting as many channels as possible.
 
 The same access points exist in Discord and WhatsApp channels. If your ClawdBot can read Discord DMs, someone can send it a malicious link in a Discord server. If it monitors WhatsApp, same vector. Each integration isn't just a feature — it's a door.
 
@@ -467,4 +467,4 @@ Build secure by design. Not secure by accident.
 
 ---
 
-*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. His everything-gemini-code repo has 50K+ GitHub stars. He created AgentShield and won the Anthropic x Forum Ventures hackathon building [zenith.chat](https://zenith.chat).*
+*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. His everything-gemini-code repo has 50K+ GitHub stars. He created AgentShield and won the Google x Forum Ventures hackathon building [zenith.chat](https://zenith.chat).*

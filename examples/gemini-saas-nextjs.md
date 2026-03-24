@@ -150,7 +150,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 ```bash
 # Planning a feature
-/plan "Add team invitations with email notifications"
+/planner "Add team invitations with email notifications"
 
 # Developing with TDD
 /tdd

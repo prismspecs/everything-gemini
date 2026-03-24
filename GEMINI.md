@@ -24,7 +24,7 @@ The project is organized into several core components:
 
 - **agents/** - Specialized subagents for delegation (planner, code-reviewer, tdd-guide, etc.)
 - **skills/** - Workflow definitions and domain knowledge (coding standards, patterns, testing)
-- **commands/** - Slash commands invoked by users (/tdd, /plan, /e2e, etc.)
+- **commands/** - Slash commands invoked by users (/tdd, /planner, /e2e, etc.)
 - **hooks/** - Trigger-based automations (session persistence, pre/post-tool hooks)
 - **rules/** - Always-follow guidelines (security, coding style, testing requirements)
 - **mcp-configs/** - MCP server configurations for external integrations
@@ -34,7 +34,7 @@ The project is organized into several core components:
 ## Key Commands
 
 - `/tdd` - Test-driven development workflow
-- `/plan` - Implementation planning
+- `/planner` - Implementation planning
 - `/e2e` - Generate and run E2E tests
 - `/code-review` - Quality review
 - `/build-fix` - Fix build errors

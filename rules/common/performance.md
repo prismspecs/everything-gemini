@@ -2,22 +2,22 @@
 
 ## Model Selection Strategy
 
-**Haiku 4.5** (90% of Sonnet capability, 3x cost savings):
+**Gemini 3 Flash** (Fastest, 95% of Pro capability for coding):
+- Day-to-day coding, exploration, file reading, simple lookups
 - Lightweight agents with frequent invocation
 - Pair programming and code generation
 - Worker agents in multi-agent systems
 
-**Sonnet 4.6** (Best coding model):
-- Main development work
+**Gemini 3 Pro** (Best reasoning and complex coding):
+- Main architectural development work
 - Orchestrating multi-agent workflows
-- Complex coding tasks
-
-**Opus 4.5** (Deepest reasoning):
-- Complex architectural decisions
+- Complex coding tasks and deep reasoning
 - Maximum reasoning requirements
 - Research and analysis tasks
 
 ## Context Window Management
+
+Gemini's 1M+ token context window is a massive advantage. However, for peak performance:
 
 Avoid last 20% of context window for:
 - Large-scale refactoring
@@ -32,12 +32,12 @@ Lower context sensitivity tasks:
 
 ## Extended Thinking + Plan Mode
 
-Extended thinking is enabled by default, reserving up to 31,999 tokens for internal reasoning.
+Extended thinking reserves tokens for internal reasoning, crucial for complex coding.
 
-Control extended thinking via:
+Control thinking via:
 - **Toggle**: Option+T (macOS) / Alt+T (Windows/Linux)
 - **Config**: Set `alwaysThinkingEnabled` in `~/.gemini/settings.json`
-- **Budget cap**: `export MAX_THINKING_TOKENS=10000`
+- **Budget cap**: `export MAX_THINKING_TOKENS=32000`
 - **Verbose mode**: Ctrl+O to see thinking output
 
 For complex tasks requiring deep reasoning:
