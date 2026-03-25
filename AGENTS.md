@@ -122,15 +122,12 @@ Troubleshoot failures: check test isolation → verify mocks → fix implementat
 ## Project Structure
 
 ```
-.agents/         — Hidden configuration and source skills
-agents/          — 13 specialized subagents
-skills/          — Symlink to .agents/skills (workflow skills)
-commands/        — 33 slash commands
-rules/           — Always-follow guidelines (common + per-language)
-mcp-configs/     — 14 MCP server configurations
+.gemini/         — Main project configuration (agents, skills, commands, rules)
+.agents          — Symlink to .gemini (for CLI compatibility)
 docs/            — Project documentation and guides
-contexts/        — Agent session contexts
 examples/        — Usage examples and configurations
+assets/          — Project assets
+mcp-configs/     — MCP server configurations
 ```
 
 ## Success Metrics

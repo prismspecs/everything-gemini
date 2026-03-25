@@ -33,16 +33,12 @@
     "url": "https://github.com/prismspecs/everything-gemini-code/issues"
   },
   "files": [
-    ".agents/",
-    "agents/",
+    ".gemini/",
+    ".agents",
     "assets/",
-    "commands/",
-    "contexts/",
     "docs/",
     "examples/",
     "mcp-configs/",
-    "rules/",
-    "skills/",
     "AGENTS.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",

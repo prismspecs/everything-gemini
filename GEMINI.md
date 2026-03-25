@@ -8,17 +8,19 @@ This is a **Gemini Code plugin** - a collection of production-ready agents, skil
 
 ## Architecture
 
-The project is organized into several core components:
+The project is organized into several core components within the **.gemini/** directory:
 
-- **.agents/** - Hidden configuration and source skills
-- **agents/** - Specialized subagents for delegation (planner, code-reviewer, tdd-guide, etc.)
-- **skills/** - Symlink to .agents/skills (workflow definitions and domain knowledge)
-- **commands/** - Slash commands invoked by users (/tdd, /planner, /e2e, etc.)
-- **rules/** - Always-follow guidelines (security, coding style, testing requirements)
-- **mcp-configs/** - MCP server configurations for external integrations
+- **.gemini/agents/** - Specialized subagents (planner, code-reviewer, tdd-guide, etc.)
+- **.gemini/skills/** - Workflow definitions and domain knowledge
+- **.gemini/commands/** - Custom slash commands
+- **.gemini/rules/** - Language-specific and common coding standards
+- **.gemini/contexts/** - Specialized session contexts
+- **.agents** - Symlink to .gemini for CLI compatibility
+
+Other top-level directories:
 - **docs/** - Project documentation and guides
-- **contexts/** - Agent session contexts
 - **examples/** - Usage examples and configurations
+- **mcp-configs/** - MCP server configurations
 
 ## Key Commands
 
