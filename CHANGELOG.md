@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.9.1 - 2026-03-26
+
+### Architecture
+
+- **The NUCLEAR Conflict Fix**: Completely removed the `.gemini/` folder from the repository root.
+- All source files are now in **`gemini-plugin-source/`**.
+- Because Gemini CLI (v0.35.1) scans any folder named `.gemini/` for Workspace commands, the only way to prevent it from finding these files twice (once in the repo and once in your user-global tier) was to remove the `.gemini/` trigger folder entirely.
+- This results in a guaranteed **single-tier load** from the User Tier (`~/.gemini/commands/`).
+- **This definitively eliminates all "Conflicts detected" warnings and prefix-renaming.**
+
+### Core
+
+- Updated `install.sh` to link from `gemini-plugin-source/`.
+- Commands in the repo are named `.toml.src` to avoid accidental discovery by other tools.
+
 ## 1.9.0 - 2026-03-23
 
 ### Core

@@ -8,14 +8,13 @@ This is a **Gemini Code plugin** - a collection of production-ready agents, skil
 
 ## Architecture
 
-The project is organized into several core components within the **.gemini/** directory:
+The project is organized into several core source components within the **gemini-plugin-source/** directory. Note that the repository **no longer contains a `.gemini/` directory** in the root; this is a physical isolation strategy to prevent the Gemini CLI from automatically discovering these files as "Workspace Tier" commands, which avoids name conflicts with your global installation.
 
-- **.gemini/agents/** - Specialized subagents (planner, code-reviewer, tdd-guide, etc.)
-- **.gemini/skills/** - Workflow definitions and domain knowledge
-- **.gemini/commands/** - Custom slash commands
-- **.gemini/rules/** - Language-specific and common coding standards
-- **.gemini/contexts/** - Specialized session contexts
-- **.agents** - Symlink to .gemini for CLI compatibility
+- **gemini-plugin-source/agents/** - Specialized subagents (planner, code-reviewer, tdd-guide, etc.)
+- **gemini-plugin-source/skills/** - Workflow definitions and domain knowledge
+- **gemini-plugin-source/commands/** - Custom slash commands (named `.toml.src` to prevent workspace conflicts)
+- **gemini-plugin-source/rules/** - Language-specific and common coding standards
+- **gemini-plugin-source/contexts/** - Specialized session contexts
 
 Other top-level directories:
 - **docs/** - Project documentation and guides
