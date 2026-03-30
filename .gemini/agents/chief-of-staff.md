@@ -1,0 +1,1 @@
+/home/grayson/workbench/everything-gemini/gemini-plugin-source/agents/chief-of-staff.md
