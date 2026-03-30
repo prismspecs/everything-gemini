@@ -1,4 +1,4 @@
-description = "Operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on gemini -p."
+description = "Operate and extend NanoClaw v2, TwinEngine's zero-dependency session-aware REPL built on gemini -p."
 prompt = '''
 # NanoClaw REPL
 

@@ -288,7 +288,7 @@ pytest -n auto
 pytest --lf
 ```
 
-## ECC Workflow
+## TwinEngine Workflow
 
 ```bash
 # Planning

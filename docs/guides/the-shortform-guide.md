@@ -1,4 +1,4 @@
-# The Shorthand Guide to Everything Gemini Code
+# The Shorthand Guide to TwinEngine
 
 ![Header: Google Hackathon Winner - Tips & Tricks for Gemini Code](./assets/images/shortform/00-header.png)
 

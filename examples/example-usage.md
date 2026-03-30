@@ -1,6 +1,6 @@
 # Example Usage: Building a Bird Sighting Blockchain App
 
-This guide demonstrates how to use the agents, commands, and skills in the **Everything Gemini Code (ECC)** harness to build a complete project from scratch.
+This guide demonstrates how to use the agents, commands, and skills in the **TwinEngine (TwinEngine)** harness to build a complete project from scratch.
 
 ## Project Idea
 **The Bird Sighting App**: A website where bird watchers can upload photos and GPS coordinates of bird sightings, which are then minted as unique "Sighting NFTs" on the Polygon blockchain.

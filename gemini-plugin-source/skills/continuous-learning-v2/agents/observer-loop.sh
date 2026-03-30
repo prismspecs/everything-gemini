@@ -28,8 +28,8 @@ analyze_observations() {
 
   echo "[$(date)] Analyzing $obs_count observations for project ${PROJECT_NAME}..." >> "$LOG_FILE"
 
-  if [ "${CLV2_IS_WINDOWS:-false}" = "true" ] && [ "${ECC_OBSERVER_ALLOW_WINDOWS:-false}" != "true" ]; then
-    echo "[$(date)] Skipping gemini analysis on Windows due to known non-interactive hang issue (#295). Set ECC_OBSERVER_ALLOW_WINDOWS=true to override." >> "$LOG_FILE"
+  if [ "${CLV2_IS_WINDOWS:-false}" = "true" ] && [ "${TWINENGINE_OBSERVER_ALLOW_WINDOWS:-false}" != "true" ]; then
+    echo "[$(date)] Skipping gemini analysis on Windows due to known non-interactive hang issue (#295). Set TWINENGINE_OBSERVER_ALLOW_WINDOWS=true to override." >> "$LOG_FILE"
     return
   fi
 
@@ -38,7 +38,7 @@ analyze_observations() {
     return
   fi
 
-  prompt_file="$(mktemp "${TMPDIR:-/tmp}/ecc-observer-prompt.XXXXXX")"
+  prompt_file="$(mktemp "${TMPDIR:-/tmp}/twinengine-observer-prompt.XXXXXX")"
   cat > "$prompt_file" <<PROMPT
 Read ${OBSERVATIONS_FILE} and identify patterns for the project ${PROJECT_NAME} (user corrections, error resolutions, repeated workflows, tool preferences).
 If you find 3+ occurrences of the same pattern, create an instinct file in ${INSTINCTS_DIR}/<id>.md.
@@ -77,7 +77,7 @@ Rules:
 - Examples of project patterns: use React functional components, follow Django REST framework conventions
 PROMPT
 
-  timeout_seconds="${ECC_OBSERVER_TIMEOUT_SECONDS:-120}"
+  timeout_seconds="${TWINENGINE_OBSERVER_TIMEOUT_SECONDS:-120}"
   exit_code=0
 
   gemini --model gemini-3-flash --max-turns 3 --print < "$prompt_file" >> "$LOG_FILE" 2>&1 &

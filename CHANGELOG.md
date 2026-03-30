@@ -61,7 +61,7 @@
 - Moved session summary persistence to `Stop` where transcript payload is available.
 - Added quality-gate and cost-tracker hooks.
 - Replaced fragile inline hook one-liners with dedicated script files.
-- Added `ECC_HOOK_PROFILE` and `ECC_DISABLED_HOOKS` controls.
+- Added `TWINENGINE_HOOK_PROFILE` and `TWINENGINE_DISABLED_HOOKS` controls.
 
 ### Cross-Platform
 

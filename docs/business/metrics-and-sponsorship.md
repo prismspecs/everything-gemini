@@ -17,12 +17,12 @@ Use four categories in every update:
 
 ```bash
 # Weekly downloads
-curl -s https://api.npmjs.org/downloads/point/last-week/ecc-universal
-curl -s https://api.npmjs.org/downloads/point/last-week/ecc-agentshield
+curl -s https://api.npmjs.org/downloads/point/last-week/twinengine-universal
+curl -s https://api.npmjs.org/downloads/point/last-week/twinengine-agentshield
 
 # Last 30 days
-curl -s https://api.npmjs.org/downloads/point/last-month/ecc-universal
-curl -s https://api.npmjs.org/downloads/point/last-month/ecc-agentshield
+curl -s https://api.npmjs.org/downloads/point/last-month/twinengine-universal
+curl -s https://api.npmjs.org/downloads/point/last-month/twinengine-agentshield
 ```
 
 ### GitHub repository adoption
@@ -44,7 +44,7 @@ gh api repos/prismspecs/everything-gemini-code/traffic/clones
 GitHub App install count is currently most reliable in the Marketplace/App dashboard.
 Use the latest value from:
 
-- [ECC Tools Marketplace](https://github.com/marketplace/ecc-tools)
+- [TwinEngine Tools Marketplace](https://github.com/marketplace/twinengine-tools)
 
 ## What Cannot Be Measured Publicly (Yet)
 
@@ -66,7 +66,7 @@ Use these as starting points in negotiation:
 
 Use this on calls:
 
-> ECC is now positioned as an agent harness performance system, not a config repo.  
+> TwinEngine is now positioned as an agent harness performance system, not a config repo.  
 > We track adoption through npm distribution, GitHub App installs, and repository growth.  
 > Gemini plugin installs are structurally undercounted publicly, so we use a blended metrics model.  
 > The project supports Gemini Code, Cursor, OpenCode, and Codex app/CLI with production-grade hook reliability and a large passing test suite.

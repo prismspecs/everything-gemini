@@ -1,0 +1,24 @@
+description = "Transform repository into a beautiful, interactive, single-page HTML course."
+prompt = '''
+# /course - Generate Interactive Codebase Course
+
+Transform any repository into a beautiful, interactive, single-page HTML course. Uses the `course-designer` agent and Zara Zhang's high-fidelity "vibe coding" patterns.
+
+## How to use
+
+- Run `/course [optional: focus on a specific module or feature]`
+- Example: `/course "The authentication flow"`
+
+## Workflow
+
+1. **Activate Agent**: Call the `course-designer` sub-agent.
+2. **Analysis Phase**:
+   - Agent scans for `package.json`, `README.md`, and core `src/` or `lib/` files.
+   - Agent identifies the core architectural patterns.
+3. **Synthesis Phase**:
+   - Agent generates a standalone `course.html` file in the project root.
+   - The file uses Tailwind CSS, Alpine.js, and Prism.js for a premium interactive feel.
+4. **Final Delivery**:
+   - Provide the user with a link to the generated `course.html`.
+   - Briefly explain the pedagogical structure of the course.
+'''

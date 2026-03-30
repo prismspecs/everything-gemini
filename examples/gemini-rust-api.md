@@ -265,7 +265,7 @@ cargo clippy -- -D warnings
 cargo fmt -- --check
 ```
 
-## ECC Workflow
+## TwinEngine Workflow
 
 ```bash
 # Planning

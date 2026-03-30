@@ -1,8 +1,8 @@
-# Everything Gemini Code
+# TwinEngine
 
-[![Stars](https://img.shields.io/github/stars/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/stargazers)
-[![Forks](https://img.shields.io/github/forks/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/network/members)
-[![Contributors](https://img.shields.io/github/contributors/prismspecs/everything-gemini-code?style=flat)](https://github.com/prismspecs/everything-gemini-code/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/prismspecs/twinengine?style=flat)](https://github.com/prismspecs/twinengine/stargazers)
+[![Forks](https://img.shields.io/github/forks/prismspecs/twinengine?style=flat)](https://github.com/prismspecs/twinengine/network/members)
+[![Contributors](https://img.shields.io/github/contributors/prismspecs/twinengine?style=flat)](https://github.com/prismspecs/twinengine/graphs/contributors)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
@@ -31,8 +31,8 @@ The `install.sh` script will create symlinks from this repository directly into 
 
 ```bash
 # Clone the repository
-git clone https://github.com/prismspecs/everything-gemini-code.git
-cd everything-gemini-code
+git clone https://github.com/prismspecs/twinengine.git
+cd twinengine
 
 # Run the install script to symlink everything
 ./install.sh
@@ -84,7 +84,7 @@ _Note: The `hooks/` directory and related shell scripts have been deprecated in 
 ## [Package] What's Inside
 
 ```
-everything-gemini-code/
+twinengine/
 |-- agents/           # Specialized subagents for delegation
 |   |-- planner.md           # Feature implementation planning
 |   |-- architect.md         # System design decisions

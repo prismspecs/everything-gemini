@@ -173,13 +173,13 @@ When reviewing pull requests from contributors (or from your own agent), look fo
 
 ```bash
 # Zero-install scan of your configuration
-npx ecc-agentshield scan
+npx twinengine-agentshield scan
 
 # Scan a specific directory
-npx ecc-agentshield scan --path ~/.gemini/
+npx twinengine-agentshield scan --path ~/.gemini/
 
 # Scan with verbose output
-npx ecc-agentshield scan --verbose
+npx twinengine-agentshield scan --verbose
 ```
 
 AgentShield checks for all of the above automatically — hidden characters, permission escalation patterns, suspicious hooks, exposed secrets, and more.
@@ -361,7 +361,7 @@ This one is particularly insidious. An MCP tool registers with a clean descripti
 
 Researchers demonstrated that poisoned MCP tools can exfiltrate `mcp.json` configuration files and SSH keys from users of Gemini CLI. The tool description is invisible to you in the UI but fully visible to the model. It's an attack vector that bypasses every permission prompt because you already said yes.
 
-Mitigation: pin MCP tool versions, verify tool descriptions haven't changed between sessions, and run `npx ecc-agentshield scan` to detect suspicious MCP configurations.
+Mitigation: pin MCP tool versions, verify tool descriptions haven't changed between sessions, and run `npx twinengine-agentshield scan` to detect suspicious MCP configurations.
 
 ### memory poisoning
 
@@ -458,13 +458,13 @@ AgentShield exists because I needed it. After maintaining the most-forked Gemini
 
 ```bash
 # Scan your current directory
-npx ecc-agentshield scan
+npx twinengine-agentshield scan
 
 # Scan a specific path
-npx ecc-agentshield scan --path ~/.gemini/
+npx twinengine-agentshield scan --path ~/.gemini/
 
 # Output as JSON for CI integration
-npx ecc-agentshield scan --format json
+npx twinengine-agentshield scan --format json
 ```
 
 No installation required. 102 rules across 5 categories. Runs in seconds.
@@ -540,7 +540,7 @@ Grade A (Score: 94) after second pass
   - External links removed or guarded
 ```
 
-Run `npx ecc-agentshield scan` after each round of fixes to verify your score improves.
+Run `npx twinengine-agentshield scan` after each round of fixes to verify your score improves.
 
 ---
 
@@ -554,7 +554,7 @@ The patterns in this guide aren't complex. They're habits. Build them into your 
 
 **Quick checklist before you close this tab:**
 
-- [ ] Run `npx ecc-agentshield scan` on your configuration
+- [ ] Run `npx twinengine-agentshield scan` on your configuration
 - [ ] Add deny lists for `~/.ssh`, `~/.aws`, `~/.env`, and credentials paths
 - [ ] Audit every external link in your skills and rules
 - [ ] Restrict `allowedTools` to only what you actually need
@@ -567,9 +567,9 @@ The patterns in this guide aren't complex. They're habits. Build them into your 
 
 ## references
 
-**ECC Ecosystem:**
-- [AgentShield on npm](https://www.npmjs.com/package/ecc-agentshield) — Zero-install agent security scanning
-- [Everything Gemini Code](https://github.com/prismspecs/everything-gemini-code) — 50K+ stars, production-ready agent configurations
+**TwinEngine Ecosystem:**
+- [AgentShield on npm](https://www.npmjs.com/package/twinengine-agentshield) — Zero-install agent security scanning
+- [TwinEngine](https://github.com/prismspecs/everything-gemini-code) — 50K+ stars, production-ready agent configurations
 - [The Shorthand Guide](./the-shortform-guide.md) — Setup and configuration fundamentals
 - [The Longform Guide](./the-longform-guide.md) — Advanced patterns and optimization
 - [The OpenClaw Guide](./the-openclaw-guide.md) — Security lessons from the agent frontier
@@ -592,4 +592,4 @@ The patterns in this guide aren't complex. They're habits. Build them into your 
 
 *Built from 10 months of maintaining the most-forked agent configuration on GitHub, auditing thousands of community contributions, and building the tools to automate what humans can't catch at scale.*
 
-*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) — Creator of Everything Gemini Code and AgentShield*
+*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) — Creator of TwinEngine and AgentShield*

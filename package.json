@@ -1,23 +1,21 @@
 {
-  "name": "ecc-universal",
+  "name": "twinengine-universal",
   "version": "1.8.0",
-  "description": "Complete collection of battle-tested Gemini Code configs — agents, skills, hooks, commands, and rules evolved over 10+ months of intensive daily use by an Anthropic hackathon winner",
+  "description": "The performance optimization system for AI agent harnesses, officially adapted for the Gemini CLI.",
   "keywords": [
-    "gemini-code",
+    "gemini",
     "ai",
     "agents",
     "skills",
     "hooks",
     "mcp",
     "rules",
-    "gemini",
     "tdd",
     "code-review",
     "security",
     "automation",
     "best-practices",
-    "presentations",
-    "slides"
+    "twinengine"
   ],
   "author": {
     "name": "prismspecs",
@@ -26,11 +24,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prismspecs/everything-gemini-code.git"
+    "url": "git+https://github.com/prismspecs/twinengine.git"
   },
-  "homepage": "https://github.com/prismspecs/everything-gemini-code#readme",
+  "homepage": "https://github.com/prismspecs/twinengine#readme",
   "bugs": {
-    "url": "https://github.com/prismspecs/everything-gemini-code/issues"
+    "url": "https://github.com/prismspecs/twinengine/issues"
   },
   "files": [
     ".gemini/",
@@ -46,10 +44,10 @@
     "install.sh"
   ],
   "bin": {
-    "ecc-install": "install.sh"
+    "twinengine-install": "install.sh"
   },
   "scripts": {
-    "postinstall": "echo '\\n  ecc-universal installed!\\n  Run: npx ecc-install typescript\\n  Docs: https://github.com/prismspecs/everything-gemini-code\\n'",
+    "postinstall": "echo '\\n  twinengine-universal installed!\\n  Run: npx twinengine-install typescript\\n  Docs: https://github.com/prismspecs/twinengine\\n'",
     "lint": "eslint . && markdownlint '**/*.md' --ignore node_modules"
   },
   "devDependencies": {

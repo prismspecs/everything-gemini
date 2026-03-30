@@ -1,10 +1,10 @@
-# The Longform Guide to Everything Gemini Code
+# The Longform Guide to TwinEngine
 
-![Header: The Longform Guide to Everything Gemini Code](./assets/images/longform/01-header.png)
+![Header: The Longform Guide to TwinEngine](./assets/images/longform/01-header.png)
 
 ---
 
-> **Prerequisite**: This guide builds on [The Shorthand Guide to Everything Gemini Code](./the-shortform-guide.md). Read that first if you haven't set up skills, hooks, subagents, MCPs, and plugins.
+> **Prerequisite**: This guide builds on [The Shorthand Guide to TwinEngine](./the-shortform-guide.md). Read that first if you haven't set up skills, hooks, subagents, MCPs, and plugins.
 
 ![Reference to Shorthand Guide](./assets/images/longform/02-shortform-reference.png)
 *The Shorthand Guide - read it first*

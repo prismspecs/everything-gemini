@@ -1,7 +1,7 @@
 ---
 name: verification-loop
 description: "A comprehensive verification system for Gemini Code sessions."
-origin: ECC
+origin: TwinEngine
 ---
 
 # Verification Loop Skill

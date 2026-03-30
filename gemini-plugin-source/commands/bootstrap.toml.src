@@ -1,0 +1,23 @@
+description = "Automatically scan project, detect stack, and suggest/install tailored agents locally."
+prompt = '''
+# /bootstrap - Optimize Project with Local Agents
+
+Automatically scan your project, detect the tech stack, and suggest/install a tailored set of agents and skills into your project's local `.gemini/` folder.
+
+## How to use
+
+1. **Activate Agent**: Call the `project-scouter` sub-agent.
+2. **Analysis Phase**:
+   - Agent reads `~/.gemini/.twinengine_source` to find the warehouse path.
+   - Agent performs deep fingerprinting of project files.
+   - Agent matches findings to available packs.
+3. **Report Phase**:
+   - Agent presents a Project Scout Report with recommendations.
+4. **Execution Phase**:
+   - If user confirms, agent runs `[PATH_TO_REPO]/install.sh --local --<selected_packs>`.
+   - Agent confirms successful installation.
+
+## Benefit
+
+Keeps your global context lean and your local environment powerful.
+'''

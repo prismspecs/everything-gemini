@@ -1,6 +1,6 @@
 # Sponsors
 
-Thank you to everyone who sponsors this project! Your support keeps the ECC ecosystem growing.
+Thank you to everyone who sponsors this project! Your support keeps the TwinEngine ecosystem growing.
 
 ## Enterprise Sponsors
 
@@ -33,7 +33,7 @@ Your sponsorship helps:
 
 Use these proof points in sponsor conversations:
 
-- Live npm install/download metrics for `ecc-universal` and `ecc-agentshield`
+- Live npm install/download metrics for `twinengine-universal` and `twinengine-agentshield`
 - GitHub App distribution via Marketplace installs
 - Public adoption signals: stars, forks, contributors, release cadence
 - Dedicated Gemini CLI support: commands, rules, agents, and MCP server configurations

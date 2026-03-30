@@ -1,7 +1,7 @@
 ---
 name: eval-harness
 description: Formal evaluation framework for Gemini Code sessions implementing eval-driven development (EDD) principles
-origin: ECC
+origin: TwinEngine
 tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 

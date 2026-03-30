@@ -247,7 +247,7 @@ go tool cover -html=coverage.out  # browser
 go test ./... -race -count=1
 ```
 
-## ECC Workflow
+## TwinEngine Workflow
 
 ```bash
 # Planning

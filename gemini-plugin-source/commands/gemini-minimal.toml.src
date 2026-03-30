@@ -1,0 +1,17 @@
+description = "Reset Global Environment to Absolute Minimum (planner, bootstrap, tdd, code-review)."
+prompt = '''
+# /gemini-minimal - Reset Global Environment to Absolute Minimum
+
+Remove all global symlinks in `~/.gemini/` and reinstall only the 4 essential "Core" tools. Use this to maintain a zero-bloat global context.
+
+## Workflow
+
+1. **Clear Phase**:
+   - `rm -rf ~/.gemini/commands/* ~/.gemini/agents/* ~/.gemini/rules/* ~/.gemini/skills/*`
+2. **Reinstall Phase**:
+   - `/home/grayson/workbench/everything-gemini/install.sh --minimal`
+   - This ensures `/planner`, `/bootstrap`, `/tdd`, and `/code-review` are the ONLY tools available globally.
+3. **Completion**:
+   - Confirm to the user that their global environment is now 100% optimized.
+   - Suggest running `/bootstrap` inside their current project to add specialized agents locally.
+'''

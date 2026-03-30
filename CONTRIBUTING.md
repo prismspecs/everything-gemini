@@ -1,4 +1,4 @@
-# Contributing to Everything Gemini Code
+# Contributing to TwinEngine
 
 Thanks for wanting to contribute! This repo is a community resource for Gemini Code users.
 
@@ -85,7 +85,7 @@ skills/
 ---
 name: your-skill-name
 description: Brief description shown in skill list
-origin: ECC
+origin: TwinEngine
 ---
 
 # Your Skill Title
