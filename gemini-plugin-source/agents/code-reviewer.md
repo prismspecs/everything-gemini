@@ -29,6 +29,15 @@ When invoked:
 
 ## Review Checklist
 
+### First Principles (Karpathy)
+
+Check for adherence to core efficiency standards:
+
+- **Surgical Integrity**: Did the changes modify files or lines outside the requested scope? (Flag "drive-by" refactoring).
+- **Simplicity First**: Is there a simpler way to achieve this? Did the author add unrequested abstractions or "future-proofing"?
+- **Style Matching**: Does the new code match the naming, indentation, and patterns of the surrounding file perfectly?
+- **Goal Alignment**: Does the implementation directly solve the stated problem without side effects?
+
 ### Security (CRITICAL)
 
 These MUST be flagged — they can cause real damage:

@@ -15,7 +15,7 @@ I used OpenClaw for a week. This is what I found.
 
 ## 1 Week of OpenClaw Use
 
-I want to be upfront about my perspective. I build AI coding tools. My everything-gemini-code repo has 50K+ stars. I created AgentShield. I spend most of my working hours thinking about how agents should interact with systems, and how those interactions can go wrong.
+I want to be upfront about my perspective. I build AI coding tools. I created AgentShield. I spend most of my working hours thinking about how agents should interact with systems, and how those interactions can go wrong.
 
 So when OpenClaw started gaining traction, I did what I always do with new tooling: I installed it, connected it to a few channels, and started probing. Not to break it. To understand the security model.
 
@@ -467,4 +467,4 @@ Build secure by design. Not secure by accident.
 
 ---
 
-*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. His everything-gemini-code repo has 50K+ GitHub stars. He created AgentShield and won the Google x Forum Ventures hackathon building [zenith.chat](https://zenith.chat).*
+*Affaan Mustafa ([@affaanmustafa](https://x.com/affaanmustafa)) builds AI coding tools and writes about AI infrastructure security. He created AgentShield.*

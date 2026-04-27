@@ -1,1 +1,0 @@
-/home/grayson/workbench/everything-gemini/gemini-plugin-source/agents/go-build-resolver.md

@@ -569,7 +569,7 @@ The patterns in this guide aren't complex. They're habits. Build them into your 
 
 **TwinEngine Ecosystem:**
 - [AgentShield on npm](https://www.npmjs.com/package/twinengine-agentshield) — Zero-install agent security scanning
-- [TwinEngine](https://github.com/prismspecs/everything-gemini-code) — 50K+ stars, production-ready agent configurations
+- [TwinEngine](https://github.com/prismspecs/everything-gemini-code) — production-ready agent configurations
 - [The Shorthand Guide](./the-shortform-guide.md) — Setup and configuration fundamentals
 - [The Longform Guide](./the-longform-guide.md) — Advanced patterns and optimization
 - [The OpenClaw Guide](./the-openclaw-guide.md) — Security lessons from the agent frontier

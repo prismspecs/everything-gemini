@@ -9,9 +9,8 @@
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 ![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
 
-> **50K+ stars** | **6K+ forks** | **30 contributors** | **Google Hackathon Winner (Adapted for Gemini)**
+## Overview
 
----
 
 **The performance optimization system for AI agent harnesses, officially adapted for the Gemini CLI.**
 

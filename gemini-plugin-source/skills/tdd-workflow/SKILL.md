@@ -49,17 +49,13 @@ ALWAYS write tests first, then implement code to make tests pass.
 
 ## TDD Workflow Steps
 
-### Step 1: Write User Journeys
-```
-As a [role], I want to [action], so that [benefit]
-
-Example:
-As a user, I want to search for markets semantically,
-so that I can find relevant markets even without exact keywords.
-```
+### Step 1: Write User Journeys & Success Criteria
+Start with the **Goal-Driven Execution** principle:
+- **User Journey**: As a [role], I want to [action], so that [benefit]
+- **Success Criteria**: Define 2-3 specific, measurable outcomes that prove the task is done (e.g., "Response time < 200ms", "Zero data loss on disconnect").
 
 ### Step 2: Generate Test Cases
-For each user journey, create comprehensive test cases:
+For each user journey, create comprehensive test cases that provide **Empirical Verification**:
 
 ```typescript
 describe('Semantic Search', () => {

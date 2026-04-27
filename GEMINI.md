@@ -30,6 +30,7 @@ Other top-level directories:
 - `/build-fix` - Fix build errors
 - `/learn` - Extract patterns from sessions
 - `/skill-create` - Generate skills from git history
+- `/clean-ai-writing` - Remove AI writing patterns
 
 ## Development Notes
 

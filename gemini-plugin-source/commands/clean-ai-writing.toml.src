@@ -1,0 +1,37 @@
+description = "Audit and rewrite content to remove common AI writing patterns (AI-isms)."
+prompt = '''
+# Clean AI Writing
+
+Your goal is to audit and rewrite the provided text to remove "AI-isms" and artificial patterns, making it feel more natural and human-written.
+
+## Rules to Apply
+
+1. **Vocabulary:**
+   - Replace "leveraging," "utilizing," "robust," "seamless," "commence" with simple words like "using," "reliable," "smooth," "start."
+   - Avoid "features," "boasts," "presents" when "is" or "has" will work.
+   - Remove filler like "In order to," "Furthermore," "Moreover."
+
+2. **Tone:**
+   - Remove promotional fluff ("vibrant," "thriving," "breathtaking").
+   - Deflate artificial significance (remove "watershed moment," "marking a new era").
+   - Replace "Experts believe" or "Studies show" with specific facts or citations.
+
+3. **Structure:**
+   - Vary sentence rhythm. Mix short and long sentences.
+   - Avoid excessive bolding or bulleted lists where prose is better.
+   - Lead with the point—don't start with rhetorical questions.
+   - Avoid "Let's explore" or "In conclusion" type phrases.
+
+4. **Style:**
+   - Use sentence case for headings.
+   - Avoid "Superficial -ing" (e.g., "symbolizing," "reflecting") unless strictly necessary.
+
+## Process
+1. **Detect:** Identify AI-isms in the text.
+2. **Rewrite:** Provide a human-sounding rewrite.
+3. **Audit:** Briefly list which patterns were removed.
+
+---
+**Input Text:**
+{{text}}
+'''

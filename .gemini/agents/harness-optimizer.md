@@ -1,1 +1,0 @@
-/home/grayson/workbench/everything-gemini/gemini-plugin-source/agents/harness-optimizer.md

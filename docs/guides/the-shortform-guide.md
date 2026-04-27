@@ -1,12 +1,10 @@
 # The Shorthand Guide to TwinEngine
 
-![Header: Google Hackathon Winner - Tips & Tricks for Gemini Code](./assets/images/shortform/00-header.png)
+![Header: Tips & Tricks for Gemini Code](./assets/images/shortform/00-header.png)
 
 ---
 
-**Been an avid Gemini Code user since the experimental rollout in Feb, and won the Google x Forum Ventures hackathon with [zenith.chat](https://zenith.chat) alongside [@DRodriguezFX](https://x.com/DRodriguezFX) - completely using Gemini Code.**
-
-Here's my complete setup after 10 months of daily use: skills, hooks, subagents, MCPs, plugins, and what actually works.
+**Been an avid Gemini Code user since the experimental rollout in Feb. Here's my complete setup after 10 months of daily use: skills, hooks, subagents, MCPs, plugins, and what actually works.**
 
 ---
 
